@@ -3494,7 +3494,7 @@ static bool32 TryChangeBattleTerrain(u32 battler, u32 statusFlag, u8 *timer)
 {
     if (!(gFieldStatuses & statusFlag))
     {
-        gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | EFFECT_ELECTRIC_TERRAIN | EFFECT_PSYCHIC_TERRAIN);
+		gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | EFFECT_ELECTRIC_TERRAIN | EFFECT_PSYCHIC_TERRAIN | STATUS_FIELD_GRAVITY);
         gFieldStatuses |= statusFlag;
 
         if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)
@@ -3964,6 +3964,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+			// come delete this if it breaks shit
+		case ABILITY_GRAVITUM:
+			if (TryChangeBattleTerrain(battler, STATUS_FIELD_GRAVITY, &gFieldTimers.gravityTimer))
+			{
+				BattleScriptPushCursorAndCallback(BattleScript_GravitumActivates);
+				effect++;
+			}
+			break;
         case ABILITY_ELECTRIC_SURGE:
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_ELECTRIC_TERRAIN, &gFieldTimers.electricTerrainTimer))
             {
@@ -7319,6 +7327,15 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
         }
     }
+	//pokemon with gravitum treat all special moves as physical
+	//COME FIX THIS LATER ITS NOT SUPPOSED TO BE GRAVITUM
+	if (GetBattlerAbility(battlerAtk) == ABILITY_GRAVITUM) {
+		if (IS_MOVE_SPECIAL(move)) 
+		{
+			atkStat = gBattleMons[battlerAtk].attack;
+			atkStage = gBattleMons[battlerAtk].statStages[STAT_ATK];
+		}
+	}
 
     // critical hits ignore attack stat's stage drops
     if (isCrit && atkStage < 6)
@@ -7336,6 +7353,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     // attacker's abilities
     switch (GetBattlerAbility(battlerAtk))
     {
+	// if special make physical
     case ABILITY_HUGE_POWER:
     case ABILITY_PURE_POWER:
         if (IS_MOVE_PHYSICAL(move))
@@ -7508,7 +7526,6 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
         defStage = gBattleMons[battlerDef].statStages[STAT_SPDEF];
         usesDefStat = FALSE;
     }
-
     // critical hits ignore positive stat changes
     if (isCrit && defStage > 6)
         defStage = 6;

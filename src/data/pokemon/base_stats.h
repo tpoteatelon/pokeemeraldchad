@@ -4694,7 +4694,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_LEDIAN] =
     {
         .baseHP        = 55,
-        .baseAttack    = 35,
+        .baseAttack    = 100,
         .baseDefense   = 50,
         .baseSpeed     = 85,
         .baseSpAttack  = 55,
@@ -4710,9 +4710,9 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FAST,
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
-        .abilities = {ABILITY_SWARM, ABILITY_EARLY_BIRD},
+        .abilities = {ABILITY_SWARM, ABILITY_IRON_FIST},
         #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_IRON_FIST,
+            .abilityHidden = ABILITY_TECHNICIAN,
         #endif
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
@@ -5976,8 +5976,8 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_QWILFISH] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 95,
+        .baseHP        = 75,
+        .baseAttack    = 105,
         .baseSpeed     = 85,
         .baseSpAttack  = 55,
         .baseSpDefense = 55,
@@ -5998,7 +5998,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_WATER_2,
         .eggGroup2 = EGG_GROUP_WATER_2,
-        .abilities = {ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM},
+        .abilities = {ABILITY_INNARDS_OUT, ABILITY_SWIFT_SWIM},
         .abilityHidden = ABILITY_INTIMIDATE,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
@@ -6642,14 +6642,14 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_STANTLER] =
     {
-        .baseHP        = 73,
+        .baseHP        = 83,
         .baseAttack    = 95,
         .baseDefense   = 62,
-        .baseSpeed     = 85,
+        .baseSpeed     = 95,
         .baseSpAttack  = 85,
         .baseSpDefense = 65,
         .type1 = TYPE_NORMAL,
-        .type2 = TYPE_NORMAL,
+        .type2 = TYPE_PSYCHIC,
         .catchRate = 45,
         .expYield = 163,
         .evYield_Attack    = 1,
@@ -6660,7 +6660,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_INTIMIDATE, ABILITY_FRISK},
+            .abilities = {ABILITY_INTIMIDATE, ABILITY_ILLUSION},
             .abilityHidden = ABILITY_SAP_SIPPER,
         #else
             .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
@@ -7248,7 +7248,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_BLAZE, ABILITY_NONE},
+        .abilities = {ABILITY_GRAVITUM, ABILITY_NONE},
         .abilityHidden = ABILITY_SPEED_BOOST,
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
@@ -9349,7 +9349,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 50,
         .baseSpDefense = 50,
-        .type1 = TYPE_GROUND,
+        .type1 = TYPE_BUG,
         .type2 = TYPE_DRAGON,
         .catchRate = 120,
         .expYield = 119,
@@ -9379,7 +9379,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 80,
         .baseSpDefense = 80,
-        .type1 = TYPE_GROUND,
+        .type1 = TYPE_BUG,
         .type2 = TYPE_DRAGON,
         .catchRate = 45,
         .expYield = 234,
@@ -10132,7 +10132,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_TROPIUS] =
     {
         .baseHP        = 99,
-        .baseAttack    = 68,
+        .baseAttack    = 88,
         .baseDefense   = 83,
         .baseSpeed     = 51,
         .baseSpAttack  = 72,
@@ -11902,16 +11902,16 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_CHERRIM] =
     {
         .baseHP        = 70,
-        .baseAttack    = 60,
+        .baseAttack    = 87,
         .baseDefense   = 70,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 87,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 60,
         .baseSpDefense = 78,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 75,
         .expYield = 158,
-        .evYield_SpAttack  = 2,
+        .evYield_Attack  = 2,
         .item2 = ITEM_MIRACLE_SEED,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -15796,10 +15796,10 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_MARACTUS] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 86,
+        .baseHP        = 85,
+        .baseAttack    = 96,
         .baseDefense   = 67,
-        .baseSpeed     = 60,
+        .baseSpeed     = 70,
         .baseSpAttack  = 106,
         .baseSpDefense = 67,
         .type1 = TYPE_GRASS,
@@ -16303,7 +16303,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 60,
         .type1 = TYPE_NORMAL,
-        .type2 = TYPE_NORMAL,
+        .type2 = TYPE_FAIRY,
         .catchRate = 60,
         .expYield = 165,
         .evYield_Speed     = 2,
@@ -17501,7 +17501,7 @@ const struct BaseStats gBaseStats[] =
     {
         .baseAttack    = 50,
         .baseSpeed     = 105,
-        .baseSpAttack  = 95,
+        .baseSpAttack  = 105,
         .baseSpDefense = 135,
         #if P_UPDATED_STATS >= GEN_7
             .baseHP        = 80,
@@ -18999,7 +18999,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_RIVALRY, ABILITY_UNNERVE},
+            .abilities = {ABILITY_RIVALRY, ABILITY_SCRAPPY},
             .abilityHidden = ABILITY_MOXIE,
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
@@ -21971,7 +21971,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_WATER_COMPACTION, ABILITY_NONE},
+            .abilities = {ABILITY_WATER_COMPACTION, ABILITY_STORM_DRAIN},
         #else
             .abilities = {ABILITY_NONE, ABILITY_NONE},
         #endif
