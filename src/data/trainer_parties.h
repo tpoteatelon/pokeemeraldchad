@@ -3379,17 +3379,17 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     },
     {
     .iv = 120,
-    .lvl = 15,
+    .lvl = 16,
     .species = SPECIES_CHINCHOU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_CHARGE_BEAM, MOVE_THUNDER_WAVE, MOVE_BUBBLE_BEAM, MOVE_STOCKPILE}
+    .moves = {MOVE_CHARGE_BEAM, MOVE_THUNDER_WAVE, MOVE_BUBBLE_BEAM, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 200,
     .lvl = 17,
     .species = SPECIES_TOGEDEMARU,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_CHARGE_BEAM, MOVE_FELL_STINGER, MOVE_THUNDER_WAVE, MOVE_SWIFT}
+    .moves = {MOVE_CHARGE_BEAM, MOVE_FELL_STINGER, MOVE_NUZZLE, MOVE_SWIFT}
     }
 };
 
