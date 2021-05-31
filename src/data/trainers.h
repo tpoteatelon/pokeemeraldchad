@@ -13,19 +13,19 @@ const struct Trainer gTrainers[] = {
 		.party = {.NoItemDefaultMoves = NULL},
 	},
 
-	[TRAINER_SAWYER_1] =
-	{
-		.partyFlags = 0,
-		.trainerClass = TRAINER_CLASS_HIKER,
-		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-		.trainerPic = TRAINER_PIC_HIKER,
-		.trainerName = _("SAWYER"),
-		.items = {},
-		.doubleBattle = FALSE,
-		.aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-		.partySize = ARRAY_COUNT(sParty_Sawyer1),
-		.party = {.NoItemDefaultMoves = sParty_Sawyer1},
-	},
+    [TRAINER_SAWYER_1] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("SAWYER"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Sawyer1),
+        .party = {.NoItemDefaultMoves = sParty_Sawyer1},
+    },
 
 	[TRAINER_GRUNT_AQUA_HIDEOUT_1] =
 	{
@@ -4451,19 +4451,19 @@ const struct Trainer gTrainers[] = {
 		.party = {.NoItemDefaultMoves = sParty_Shelby5},
 	},
 
-	[TRAINER_CALVIN_1] =
-	{
-		.partyFlags = 0,
-		.trainerClass = TRAINER_CLASS_YOUNGSTER,
-		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-		.trainerPic = TRAINER_PIC_YOUNGSTER,
-		.trainerName = _("CALVIN"),
-		.items = {},
-		.doubleBattle = FALSE,
-		.aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-		.partySize = ARRAY_COUNT(sParty_Calvin1),
-		.party = {.NoItemDefaultMoves = sParty_Calvin1},
-	},
+    [TRAINER_CALVIN_1] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("CALVIN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Calvin1),
+        .party = {.NoItemDefaultMoves = sParty_Calvin1},
+    },
 
 	[TRAINER_BILLY] =
 	{
@@ -4661,19 +4661,19 @@ const struct Trainer gTrainers[] = {
 		.party = {.NoItemDefaultMoves = sParty_Eddie},
 	},
 
-	[TRAINER_ALLEN] =
-	{
-		.partyFlags = 0,
-		.trainerClass = TRAINER_CLASS_YOUNGSTER,
-		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-		.trainerPic = TRAINER_PIC_YOUNGSTER,
-		.trainerName = _("ALLEN"),
-		.items = {},
-		.doubleBattle = FALSE,
-		.aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-		.partySize = ARRAY_COUNT(sParty_Allen),
-		.party = {.NoItemDefaultMoves = sParty_Allen},
-	},
+    [TRAINER_ALLEN] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("ALLEN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Allen),
+        .party = {.NoItemDefaultMoves = sParty_Allen},
+    },
 
 	[TRAINER_TIMMY] =
 	{
@@ -8609,19 +8609,19 @@ const struct Trainer gTrainers[] = {
 		.party = {.NoItemDefaultMoves = sParty_Crissy},
 	},
 
-	[TRAINER_RICK] =
-	{
-		.partyFlags = 0,
-		.trainerClass = TRAINER_CLASS_BUG_CATCHER,
-		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-		.trainerPic = TRAINER_PIC_BUG_CATCHER,
-		.trainerName = _("RICK"),
-		.items = {},
-		.doubleBattle = FALSE,
-		.aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-		.partySize = ARRAY_COUNT(sParty_Rick),
-		.party = {.NoItemDefaultMoves = sParty_Rick},
-	},
+    [TRAINER_RICK] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("RICK"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Rick),
+        .party = {.NoItemDefaultMoves = sParty_Rick},
+    },
 
 	[TRAINER_LYLE] =
 	{
