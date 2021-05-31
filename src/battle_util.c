@@ -7327,13 +7327,20 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
         }
     }
-	//pokemon with gravitum treat all special moves as physical
-	//COME FIX THIS LATER ITS NOT SUPPOSED TO BE GRAVITUM
-	if (GetBattlerAbility(battlerAtk) == ABILITY_GRAVITUM) {
+	//pokemon with knucklehead treat all special moves as physical
+	if (GetBattlerAbility(battlerAtk) == ABILITY_KNUCKLEHEAD) {
 		if (IS_MOVE_SPECIAL(move)) 
 		{
 			atkStat = gBattleMons[battlerAtk].attack;
 			atkStage = gBattleMons[battlerAtk].statStages[STAT_ATK];
+		}
+	}
+	// inverse for bookworm
+	if (GetBattlerAbility(battlerAtk) == ABILITY_BOOKWORM) {
+		if (IS_MOVE_PHYSICAL(move))
+		{
+			atkStat = gBattleMons[battlerAtk].spAttack;
+			atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
 		}
 	}
 

@@ -255,6 +255,8 @@ static const u8 sGrimNeighDescription[] = _("KOs boost Sp. Atk stat.");
 static const u8 sAsOneIceRiderDescription[] = _("Unnerve and Chilling Neigh.");
 static const u8 sAsOneShadowRiderDescription[] = _("Unnerve and Grim Neigh.");
 static const u8 sGravitumDescription[] = _("Increases Gravity.");
+static const u8 sKnuckleheadDescription[] = _("All physical moves are special.");
+static const u8 sBookwormDescription[] = _("All special moves are physical.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
@@ -799,5 +801,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_GRIM_NEIGH] = sGrimNeighDescription,
     [ABILITY_AS_ONE_ICE_RIDER] = sAsOneIceRiderDescription,
     [ABILITY_AS_ONE_SHADOW_RIDER] = sAsOneShadowRiderDescription,
-	[ABILITY_GRAVITUM] = sGravitumDescription
+	[ABILITY_GRAVITUM] = sGravitumDescription,
+	[ABILITY_KNUCKLEHEAD] = sKnuckleheadDescription,
+	[ABILITY_BOOKWORM] = sBookwormDescription
 };
