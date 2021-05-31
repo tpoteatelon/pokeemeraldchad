@@ -4208,8 +4208,7 @@ static const struct TrainerMonItemDefaultMoves sParty_Calvin1[] = {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_LILLIPUP,
-    .heldItem = 
-    }
+	}
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Billy[] = {
