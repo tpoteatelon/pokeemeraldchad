@@ -63,18 +63,18 @@
 
 const struct WildPokemon gRoute101_LandMons[] =
 {
-    { 2, 3, SPECIES_STARLY },
+    { 3, 3, SPECIES_STARLY },
     { 2, 2, SPECIES_LILLIPUP },
-    { 2, 3, SPECIES_STARLY },
-    { 2, 3, SPECIES_LILLIPUP },
-    { 2, 3, SPECIES_LILLIPUP },
-    { 2, 3, SPECIES_PIDGEY },
+    { 3, 3, SPECIES_STARLY },
+    { 3, 3, SPECIES_LILLIPUP },
+    { 4, 4, SPECIES_LILLIPUP },
+    { 3, 3, SPECIES_PIDGEY },
     { 3, 4, SPECIES_PIDGEY },
-    { 2, 3, SPECIES_BUNNELBY },
-    { 3, 3, SPECIES_BUNNELBY },
+    { 3, 4, SPECIES_BUNNELBY },
+    { 4, 4, SPECIES_BUNNELBY },
     { 3, 3, SPECIES_RATTATA_ALOLAN },
     { 4, 4, SPECIES_RATTATA_ALOLAN },
-    { 4, 4, SPECIES_BUNNELBY },
+    { 5, 5, SPECIES_BUNNELBY },
 };
 
 const struct WildPokemonInfo gRoute101_LandMonsInfo = { 20, gRoute101_LandMons };
@@ -87,11 +87,11 @@ const struct WildPokemon gRoute102_LandMons[] =
 {
     { 3, 3, SPECIES_NATU },
     { 3, 3, SPECIES_MAREEP },
-    { 4, 4, SPECIES_MARILL },
+    { 3, 4, SPECIES_MARILL },
     { 4, 4, SPECIES_SUNKERN },
-    { 3, 3, SPECIES_LOTAD },
     { 4, 4, SPECIES_LOTAD },
-    { 3, 3, SPECIES_ODDISH },
+    { 4, 4, SPECIES_LOTAD },
+    { 3, 4, SPECIES_ODDISH },
     { 3, 3, SPECIES_ODDISH },
     { 4, 4, SPECIES_SNUBBULL },
     { 4, 4, SPECIES_RALTS },
@@ -134,17 +134,17 @@ const struct WildPokemonInfo gRoute102_FishingMonsInfo = { 30, gRoute102_Fishing
 
 const struct WildPokemon gRoute103_LandMons[] =
 {
-    { 2, 2, SPECIES_LILLIPUP },
-    { 3, 3, SPECIES_BELLSPROUT },
+    { 3, 3, SPECIES_LILLIPUP },
+    { 3, 4, SPECIES_BELLSPROUT },
     { 3, 3, SPECIES_LILLIPUP },
     { 4, 4, SPECIES_PIDGEY },
-    { 2, 2, SPECIES_WINGULL },
+    { 3, 4, SPECIES_WINGULL },
     { 3, 3, SPECIES_STARLY },
     { 3, 3, SPECIES_STARLY },
     { 4, 4, SPECIES_PIDGEY },
     { 3, 3, SPECIES_WOOPER },
     { 3, 3, SPECIES_ABRA },
-    { 2, 2, SPECIES_ABRA },
+    { 3, 3, SPECIES_ABRA },
     { 4, 4, SPECIES_SQUIRTLE },
 };
 
@@ -183,18 +183,18 @@ const struct WildPokemonInfo gRoute103_FishingMonsInfo = { 30, gRoute103_Fishing
 
 const struct WildPokemon gRoute104_LandMons[] =
 {
-    { 4, 4, SPECIES_BIDOOF },
-    { 4, 4, SPECIES_PHANPY },
     { 5, 5, SPECIES_BIDOOF },
     { 5, 5, SPECIES_PHANPY },
-    { 4, 4, SPECIES_FLETCHLING },
-    { 5, 5, SPECIES_POOCHYENA },
-    { 4, 4, SPECIES_CLOBBOPUS },
+    { 6, 6, SPECIES_BIDOOF },
+    { 6, 6, SPECIES_PHANPY },
+    { 6, 6, SPECIES_FLETCHLING },
+    { 6, 6, SPECIES_POOCHYENA },
     { 5, 5, SPECIES_CLOBBOPUS },
-    { 4, 4, SPECIES_CLOBBOPUS },
-    { 5, 5, SPECIES_POOCHYENA },
-    { 5, 5, SPECIES_BIDOOF },
-    { 5, 5, SPECIES_BIDOOF },
+    { 6, 6, SPECIES_CLOBBOPUS },
+    { 5, 7, SPECIES_SLAKOTH },
+    { 6, 7, SPECIES_POOCHYENA },
+    { 7, 7, SPECIES_SLAKOTH },
+    { 8, 8, SPECIES_SLAKOTH },
 };
 
 const struct WildPokemonInfo gRoute104_LandMonsInfo = { 20, gRoute104_LandMons };
@@ -476,17 +476,17 @@ const struct WildPokemonInfo gRoute114_FishingMonsInfo = { 30, gRoute114_Fishing
 
 const struct WildPokemon gRoute116_LandMons[] =
 {
-    { 6, 6, SPECIES_MACHOP },
-    { 6, 6, SPECIES_SOLOSIS },
-    { 6, 6, SPECIES_TAILLOW },
-    { 7, 7, SPECIES_TAILLOW },
-    { 7, 7, SPECIES_GROWLITHE },
-    { 6, 6, SPECIES_RATTATA },
-    { 7, 7, SPECIES_MINCCINO },
+    { 7, 7, SPECIES_MACHOP },
+    { 7, 7, SPECIES_SOLOSIS },
+    { 6, 7, SPECIES_TAILLOW },
+    { 6, 7, SPECIES_TAILLOW },
+    { 6, 7, SPECIES_GROWLITHE },
+    { 6, 7, SPECIES_RATTATA },
+    { 6, 7, SPECIES_MINCCINO },
     { 8, 8, SPECIES_MINCCINO },
-    { 7, 7, SPECIES_RATTATA },
-    { 8, 8, SPECIES_MINCCINO },
-    { 7, 7, SPECIES_MINCCINO },
+    { 8, 8, SPECIES_FOMANTIS },
+    { 8, 8, SPECIES_FOMANTIS },
+    { 8, 8, SPECIES_FOMANTIS },
     { 9, 9, SPECIES_ROCKRUFF },
 };
 
@@ -627,17 +627,17 @@ const struct WildPokemonInfo gRoute124_FishingMonsInfo = { 30, gRoute124_Fishing
 
 const struct WildPokemon gPetalburgWoods_LandMons[] =
 {
-    { 5, 5, SPECIES_WEEDLE },
-    { 5, 5, SPECIES_SEWADDLE },
-    { 5, 5, SPECIES_LEDYBA },
-    { 6, 6, SPECIES_CUTIEFLY },
-    { 5, 5, SPECIES_JOLTIK },
-    { 5, 5, SPECIES_SEWADDLE },
-    { 6, 6, SPECIES_PINECO },
-    { 6, 6, SPECIES_FOMANTIS },
-    { 5, 5, SPECIES_VENIPEDE },
-    { 5, 5, SPECIES_GRUBBIN },
-    { 6, 6, SPECIES_SLAKOTH },
+    { 6, 7, SPECIES_WEEDLE },
+    { 6, 7, SPECIES_SEWADDLE },
+    { 6, 7, SPECIES_LEDYBA },
+    { 7, 7, SPECIES_CUTIEFLY },
+    { 6, 7, SPECIES_JOLTIK },
+    { 6, 7, SPECIES_SEWADDLE },
+    { 7, 7, SPECIES_PINECO },
+    { 7, 7, SPECIES_LEDYBA },
+    { 7, 7, SPECIES_VENIPEDE },
+    { 7, 7, SPECIES_GRUBBIN },
+    { 7, 7, SPECIES_VENIPEDE },
     { 7, 7, SPECIES_SKORUPI },
 };
 

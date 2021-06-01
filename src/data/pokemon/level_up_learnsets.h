@@ -226,7 +226,9 @@ static const struct LevelUpMove sWeedleLevelUpLearnset[] = {
 
 static const struct LevelUpMove sKakunaLevelUpLearnset[] = {
     //LEVEL_UP_MOVE( 0, MOVE_HARDEN),
-    LEVEL_UP_MOVE( 1, MOVE_HARDEN),
+	LEVEL_UP_MOVE(1, MOVE_POISON_STING),
+	LEVEL_UP_MOVE(1, MOVE_STRING_SHOT),
+	LEVEL_UP_MOVE(9, MOVE_BUG_BITE),
     LEVEL_UP_END
 };
 
@@ -3838,7 +3840,7 @@ static const struct LevelUpMove sSunfloraLevelUpLearnset[] = {
     LEVEL_UP_MOVE(28, MOVE_PETAL_DANCE),
     LEVEL_UP_MOVE(31, MOVE_NATURAL_GIFT),
     LEVEL_UP_MOVE(34, MOVE_SOLAR_BEAM),
-    LEVEL_UP_MOVE(37, MOVE_DOUBLE_EDGE),
+    LEVEL_UP_MOVE(37, MOVE_FIERY_DANCE),
     LEVEL_UP_MOVE(40, MOVE_SUNNY_DAY),
     LEVEL_UP_MOVE(43, MOVE_LEAF_STORM),
     LEVEL_UP_MOVE(50, MOVE_PETAL_BLIZZARD),
