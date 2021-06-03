@@ -1018,6 +1018,65 @@ Route104_EventScript_Darian:: @ 81ED5D5
 	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route104_EventScript_DarianNew::
+	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat
+	msgbox Route104_EventScript_DarianNew_Text_0
+	goto_if_unset FLAG_RECEIVED_OLD_ROD, Route104_EventScript_DarianNew_2
+	msgbox Route104_EventScript_DarianNew_Text_1
+
+Route104_EventScript_DarianNew_1:
+	setflag FLAG_RECEIVED_OLD_ROD
+	release
+	end
+
+Route104_EventScript_DarianNew_2:
+	giveitem ITEM_OLD_ROD
+	goto Route104_EventScript_DarianNew_1
+
+Route104_EventScript_WomanNew::
+	lockall
+	faceplayer
+	goto_if_set FLAG_RECIEVED_SON, Route104_EventScript_WomanNew_1
+	msgbox Route104_EventScript_WomanNew_Text_1
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq Route104_EventScript_WomanNew_4
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route104_EventScript_WomanNew_Text_4
+	givemon SPECIES_SHELLOS, 7, ITEM_MYSTIC_WATER
+	setflag FLAG_RECIEVED_SON
+	msgbox Route104_EventScript_WomanNew_Text_3
+	release
+	end
+
+Route104_EventScript_WomanNew_1:
+	msgbox Route104_EventScript_WomanNew_Text_0
+	release
+	end
+
+Route104_EventScript_WomanNew_4:
+	msgbox Route104_EventScript_WomanNew_Text_2
+	release
+	end
+
+
+Route104_EventScript_WomanNew_Text_0:
+	.string "How's my son doing?$"
+
+Route104_EventScript_WomanNew_Text_1:
+	.string "Please, My son... He is very sick... Take\n"
+	.string "care of him, please...$"
+
+Route104_EventScript_WomanNew_Text_2:
+	.string "You don't have any room in your party.$"
+
+Route104_EventScript_WomanNew_Text_3:
+	.string "Thank you.$"
+
+Route104_EventScript_WomanNew_Text_4:
+	.string "{PLAYER} has received a SHELLOS.$"
+
+
 Route104_Text_BrineyLivesInSeasideCottage: @ 81ED5EC
 	.string "That seaside cottage is where\n"
 	.string "MR. BRINEY lives.\p"
@@ -1190,3 +1249,10 @@ Route104_Text_BrendanPostBattle: @ 81EE120
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+Route104_EventScript_DarianNew_Text_0:
+	.string "That's it, I'm no good at fishing. You\n"
+	.string "can have my OLD ROD.$"
+
+Route104_EventScript_DarianNew_Text_1:
+	.string "Are you having any luck?$"

@@ -594,7 +594,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
-        .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
+        .abilities = {ABILITY_UPDRAFT, ABILITY_NONE},
         #ifdef BATTLE_ENGINE
             .abilityHidden = ABILITY_SNIPER,
         #endif
@@ -8091,7 +8091,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         #ifdef BATTLE_ENGINE
-            .abilityHidden = ABILITY_UNNERVE,
+            .abilityHidden = ABILITY_UPDRAFT,
         #endif
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,

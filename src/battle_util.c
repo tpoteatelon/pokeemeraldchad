@@ -7070,6 +7070,11 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
         break;
+	//custom
+	case ABILITY_UPDRAFT:
+		if (moveType == TYPE_FLYING)
+			MulModifier(&modifier, UQ_4_12(1.5));
+		break;
     case ABILITY_PIXILATE:
         if (moveType == TYPE_FAIRY && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));

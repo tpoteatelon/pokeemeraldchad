@@ -225,10 +225,10 @@ static const struct LevelUpMove sWeedleLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sKakunaLevelUpLearnset[] = {
-    //LEVEL_UP_MOVE( 0, MOVE_HARDEN),
-	LEVEL_UP_MOVE(1, MOVE_POISON_STING),
-	LEVEL_UP_MOVE(1, MOVE_STRING_SHOT),
-	LEVEL_UP_MOVE(9, MOVE_BUG_BITE),
+    LEVEL_UP_MOVE( 0, MOVE_DRAGON_RAGE),
+	LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
+	LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+	LEVEL_UP_MOVE( 9, MOVE_BUG_BITE),
     LEVEL_UP_END
 };
 
@@ -3825,6 +3825,7 @@ static const struct LevelUpMove sSunkernLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sSunfloraLevelUpLearnset[] = {
+	LEVEL_UP_MOVE( 0, MOVE_FLAME_BURST),
     LEVEL_UP_MOVE( 1, MOVE_FLOWER_SHIELD),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
@@ -5805,10 +5806,10 @@ static const struct LevelUpMove sMasquerainLevelUpLearnset[] = {
     LEVEL_UP_MOVE(22, MOVE_AIR_CUTTER),
     LEVEL_UP_MOVE(26, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE(32, MOVE_SILVER_WIND),
+	LEVEL_UP_MOVE(35, MOVE_QUIVER_DANCE),
     LEVEL_UP_MOVE(38, MOVE_AIR_SLASH),
-    LEVEL_UP_MOVE(42, MOVE_BUG_BUZZ),
+    LEVEL_UP_MOVE(40, MOVE_BUG_BUZZ),
     LEVEL_UP_MOVE(48, MOVE_WHIRLWIND),
-    LEVEL_UP_MOVE(52, MOVE_QUIVER_DANCE),
     LEVEL_UP_END
 };
 

@@ -476,17 +476,17 @@ const struct WildPokemonInfo gRoute114_FishingMonsInfo = { 30, gRoute114_Fishing
 
 const struct WildPokemon gRoute116_LandMons[] =
 {
-    { 7, 7, SPECIES_MACHOP },
-    { 7, 7, SPECIES_SOLOSIS },
-    { 6, 7, SPECIES_TAILLOW },
-    { 6, 7, SPECIES_TAILLOW },
-    { 6, 7, SPECIES_GROWLITHE },
-    { 6, 7, SPECIES_RATTATA },
-    { 6, 7, SPECIES_MINCCINO },
-    { 8, 8, SPECIES_MINCCINO },
+    { 8, 8, SPECIES_MACHOP },
+    { 8, 8, SPECIES_SOLOSIS },
+    { 8, 8, SPECIES_TAILLOW },
+    { 8, 8, SPECIES_TAILLOW },
+    { 8, 9, SPECIES_GROWLITHE },
+    { 8, 9, SPECIES_RATTATA },
+    { 8, 9, SPECIES_MINCCINO },
+    { 8, 9, SPECIES_MINCCINO },
     { 8, 8, SPECIES_FOMANTIS },
-    { 8, 8, SPECIES_FOMANTIS },
-    { 8, 8, SPECIES_FOMANTIS },
+    { 8, 9, SPECIES_FOMANTIS },
+    { 8, 9, SPECIES_FOMANTIS },
     { 9, 9, SPECIES_ROCKRUFF },
 };
 
@@ -649,18 +649,18 @@ const struct WildPokemonInfo gPetalburgWoods_LandMonsInfo = { 20, gPetalburgWood
 
 const struct WildPokemon gRusturfTunnel_LandMons[] =
 {
-    { 6, 6, SPECIES_WHISMUR },
-    { 7, 7, SPECIES_WHISMUR },
-    { 6, 6, SPECIES_WHISMUR },
-    { 6, 6, SPECIES_WHISMUR },
-    { 7, 7, SPECIES_WHISMUR },
-    { 7, 7, SPECIES_WHISMUR },
-    { 5, 5, SPECIES_WHISMUR },
+    { 8, 8, SPECIES_GEODUDE },
     { 8, 8, SPECIES_WHISMUR },
-    { 5, 5, SPECIES_WHISMUR },
-    { 8, 8, SPECIES_WHISMUR },
-    { 5, 5, SPECIES_WHISMUR },
-    { 8, 8, SPECIES_WHISMUR },
+    { 8, 8, SPECIES_ROGGENROLA },
+    { 8, 8, SPECIES_SANDSHREW },
+    { 8, 8, SPECIES_MAGBY },
+    { 9, 9, SPECIES_SLUGMA },
+    { 8, 9, SPECIES_SANDILE },
+    { 8, 9, SPECIES_GEODUDE },
+    { 8, 9, SPECIES_WHISMUR },
+    { 8, 9, SPECIES_WHISMUR },
+    { 11, 11, SPECIES_SLUGMA },
+    { 10, 10, SPECIES_SPOINK },
 };
 
 const struct WildPokemonInfo gRusturfTunnel_LandMonsInfo = { 10, gRusturfTunnel_LandMons };

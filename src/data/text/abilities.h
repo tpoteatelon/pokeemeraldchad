@@ -257,6 +257,7 @@ static const u8 sAsOneShadowRiderDescription[] = _("Unnerve and Grim Neigh.");
 static const u8 sGravitumDescription[] = _("Increases Gravity.");
 static const u8 sKnuckleheadDescription[] = _("All physical moves are special.");
 static const u8 sBookwormDescription[] = _("All special moves are physical.");
+static const u8 sUpdraftDescription[] = _("Powers up flying moves.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
@@ -529,6 +530,9 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_AS_ONE_ICE_RIDER] = _("As One"),
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
 	[ABILITY_GRAVITUM] = _("Gravitum"),
+	[ABILITY_KNUCKLEHEAD] = _("Knucklehead"),
+	[ABILITY_BOOKWORM] = _("Bookworm"),
+	[ABILITY_UPDRAFT] = _("Updraft"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -803,5 +807,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_AS_ONE_SHADOW_RIDER] = sAsOneShadowRiderDescription,
 	[ABILITY_GRAVITUM] = sGravitumDescription,
 	[ABILITY_KNUCKLEHEAD] = sKnuckleheadDescription,
-	[ABILITY_BOOKWORM] = sBookwormDescription
+	[ABILITY_BOOKWORM] = sBookwormDescription,
+	[ABILITY_UPDRAFT] = sUpdraftDescription,
 };
