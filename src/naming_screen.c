@@ -1477,19 +1477,22 @@ static bool8 HandleKeyboardEvent(void)
 
 static bool8 KeyboardKeyHandler_Character(u8 input)
 {
-    TryStartButtonFlash(BUTTON_COUNT, FALSE, FALSE);
-    if (input == INPUT_A_BUTTON)
-    {
-        bool8 textFull = AddTextCharacter();
+	TryStartButtonFlash(BUTTON_COUNT, FALSE, FALSE);
+	if (input == INPUT_A_BUTTON)
+	{
+		bool8 textFull = AddTextCharacter();
 
-        SquishCursor();
-        if (textFull)
-        {
-            SetInputState(INPUT_STATE_OVERRIDE);
-            sNamingScreen->state = STATE_MOVE_TO_OK_BUTTON;
-        }
-    }
-    return FALSE;
+		if (sNamingScreen->currentPage == KBPAGE_LETTERS_UPPER && GetTextEntryPosition() == 1)
+			MainState_StartPageSwap();
+
+		SquishCursor();
+		if (textFull)
+		{
+			SetInputState(INPUT_STATE_OVERRIDE);
+			sNamingScreen->state = STATE_MOVE_TO_OK_BUTTON;
+		}
+	}
+	return FALSE;
 }
 
 static bool8 KeyboardKeyHandler_Page(u8 input)
