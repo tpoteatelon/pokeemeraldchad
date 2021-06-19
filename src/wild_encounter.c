@@ -287,6 +287,13 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += alteringCaveId;
             }
 
+			if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE104) &&
+				gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE104))
+			{
+				u16 route104Id = VarGet(VAR_ROUTE104_ENCOUNTER);
+				i += route104Id;
+			}
+
             return i;
         }
     }

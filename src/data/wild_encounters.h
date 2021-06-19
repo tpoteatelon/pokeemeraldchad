@@ -230,6 +230,55 @@ const struct WildPokemon gRoute104_FishingMons[] =
 const struct WildPokemonInfo gRoute104_FishingMonsInfo = { 30, gRoute104_FishingMons };
 
 
+const struct WildPokemon gRoute1041_LandMons[] =
+{
+    { 5, 5, SPECIES_SANDYGAST },
+    { 5, 5, SPECIES_WIMPOD },
+    { 6, 6, SPECIES_BINACLE },
+    { 6, 6, SPECIES_KRABBY },
+    { 6, 6, SPECIES_CRABRAWLER },
+    { 6, 6, SPECIES_SLOWPOKE },
+    { 5, 5, SPECIES_CLOBBOPUS },
+    { 6, 6, SPECIES_CLOBBOPUS },
+    { 5, 7, SPECIES_SLAKOTH },
+    { 6, 7, SPECIES_POOCHYENA },
+    { 7, 7, SPECIES_SLAKOTH },
+    { 8, 8, SPECIES_SLAKOTH },
+};
+
+const struct WildPokemonInfo gRoute1041_LandMonsInfo = { 20, gRoute1041_LandMons };
+
+
+const struct WildPokemon gRoute1041_WaterMons[] =
+{
+    { 10, 30, SPECIES_WINGULL },
+    { 15, 25, SPECIES_WINGULL },
+    { 15, 25, SPECIES_WINGULL },
+    { 25, 30, SPECIES_PELIPPER },
+    { 25, 30, SPECIES_PELIPPER },
+};
+
+const struct WildPokemonInfo gRoute1041_WaterMonsInfo = { 4, gRoute1041_WaterMons };
+
+
+
+const struct WildPokemon gRoute1041_FishingMons[] =
+{
+    { 5, 10, SPECIES_MAGIKARP },
+    { 5, 10, SPECIES_LOTAD },
+    { 10, 30, SPECIES_OMANYTE },
+    { 10, 30, SPECIES_KABUTO },
+    { 10, 30, SPECIES_KABUTO },
+    { 25, 30, SPECIES_OMASTAR },
+    { 30, 35, SPECIES_KABUTOPS },
+    { 20, 25, SPECIES_STUNFISK },
+    { 35, 40, SPECIES_MAREANIE },
+    { 40, 45, SPECIES_MAREANIE },
+};
+
+const struct WildPokemonInfo gRoute1041_FishingMonsInfo = { 30, gRoute1041_FishingMons };
+
+
 
 const struct WildPokemon gRoute105_WaterMons[] =
 {
@@ -3819,6 +3868,14 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .waterMonsInfo = &gRoute104_WaterMonsInfo,
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = &gRoute104_FishingMonsInfo,
+    },
+    {
+        .mapGroup = MAP_GROUP(ROUTE104),
+        .mapNum = MAP_NUM(ROUTE104),
+        .landMonsInfo = &gRoute1041_LandMonsInfo,
+        .waterMonsInfo = &gRoute1041_WaterMonsInfo,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = &gRoute1041_FishingMonsInfo,
     },
     {
         .mapGroup = MAP_GROUP(ROUTE105),
