@@ -75,6 +75,20 @@ Route102_EventScript_Allen:: @ 81EC1E1
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route102_EventScript_MasterJoe::
+	trainerbattle_single TRAINER_MJOE, Route102_Text_MJOEIntro, Route102_Text_MJOEDefeated
+	msgbox Route102_Text_MJOEPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route102_Text_MJOEIntro:
+	.string "I am Joe.$"
+
+Route102_Text_MJOEDefeated:
+	.string "Ha ha ha!$"
+
+Route102_Text_MJOEPostBattle:
+	.string "Is good!$"
+
 Route102_Text_WatchMeCatchPokemon: @ 81EC1F8
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"

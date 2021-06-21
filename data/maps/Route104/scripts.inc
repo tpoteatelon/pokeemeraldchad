@@ -1062,7 +1062,6 @@ Route104_EventScript_WomanNew_4:
 Route104_EventScript_ChangeEncounter::
 	setvaddress Route104_EventScript_ChangeEncounter
 	compare VAR_ROUTE104_ENCOUNTER, 1
-	playfanfare MUS_REGISTER_MATCH_CALL
 	vgoto_if_eq Route104_EventScript_ChangeEncounterReset
 	addvar VAR_ROUTE104_ENCOUNTER, 1
 	end

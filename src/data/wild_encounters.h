@@ -720,18 +720,18 @@ const struct WildPokemonInfo gRusturfTunnel_LandMonsInfo = { 10, gRusturfTunnel_
 
 const struct WildPokemon gGraniteCave_1F_LandMons[] =
 {
-    { 7, 7, SPECIES_ZUBAT },
-    { 8, 8, SPECIES_MAKUHITA },
-    { 7, 7, SPECIES_MAKUHITA },
-    { 8, 8, SPECIES_ZUBAT },
-    { 9, 9, SPECIES_MAKUHITA },
-    { 8, 8, SPECIES_ABRA },
-    { 10, 10, SPECIES_MAKUHITA },
-    { 6, 6, SPECIES_MAKUHITA },
-    { 7, 7, SPECIES_GEODUDE },
-    { 8, 8, SPECIES_GEODUDE },
-    { 6, 6, SPECIES_GEODUDE },
-    { 9, 9, SPECIES_GEODUDE },
+    { 12, 12, SPECIES_TIMBURR },
+    { 12, 12, SPECIES_WOOBAT },
+    { 12, 12, SPECIES_TIMBURR },
+    { 13, 13, SPECIES_WOOBAT },
+    { 13, 13, SPECIES_ROGGENROLA },
+    { 12, 12, SPECIES_ROGGENROLA },
+    { 13, 13, SPECIES_WOOBAT },
+    { 12, 15, SPECIES_TIMBURR },
+    { 12, 13, SPECIES_AMAURA },
+    { 12, 13, SPECIES_TYRUNT },
+    { 14, 14, SPECIES_AMAURA },
+    { 14, 14, SPECIES_TYRUNT },
 };
 
 const struct WildPokemonInfo gGraniteCave_1F_LandMonsInfo = { 10, gGraniteCave_1F_LandMons };
@@ -742,18 +742,18 @@ const struct WildPokemonInfo gGraniteCave_1F_LandMonsInfo = { 10, gGraniteCave_1
 
 const struct WildPokemon gGraniteCave_B1F_LandMons[] =
 {
-    { 9, 9, SPECIES_ZUBAT },
-    { 10, 10, SPECIES_ARON },
-    { 9, 9, SPECIES_ARON },
-    { 11, 11, SPECIES_ARON },
-    { 10, 10, SPECIES_ZUBAT },
-    { 9, 9, SPECIES_ABRA },
-    { 10, 10, SPECIES_MAKUHITA },
-    { 11, 11, SPECIES_MAKUHITA },
-    { 10, 10, SPECIES_SABLEYE },
-    { 10, 10, SPECIES_SABLEYE },
-    { 9, 9, SPECIES_SABLEYE },
-    { 11, 11, SPECIES_SABLEYE },
+    { 11, 12, SPECIES_DRILBUR },
+    { 11, 12, SPECIES_ROGGENROLA },
+    { 11, 12, SPECIES_ARON },
+    { 11, 13, SPECIES_ARON },
+    { 11, 13, SPECIES_GOLETT },
+    { 12, 12, SPECIES_NOSEPASS },
+    { 12, 12, SPECIES_ROGGENROLA },
+    { 12, 12, SPECIES_ROGGENROLA },
+    { 11, 13, SPECIES_SABLEYE },
+    { 12, 13, SPECIES_SABLEYE },
+    { 13, 14, SPECIES_SABLEYE },
+    { 15, 15, SPECIES_SABLEYE },
 };
 
 const struct WildPokemonInfo gGraniteCave_B1F_LandMonsInfo = { 10, gGraniteCave_B1F_LandMons };
@@ -876,18 +876,18 @@ const struct WildPokemonInfo gAbandonedShip_Rooms_B1F_FishingMonsInfo = { 20, gA
 
 const struct WildPokemon gGraniteCave_B2F_LandMons[] =
 {
-    { 10, 10, SPECIES_ZUBAT },
-    { 11, 11, SPECIES_ARON },
-    { 10, 10, SPECIES_ARON },
-    { 11, 11, SPECIES_ZUBAT },
-    { 12, 12, SPECIES_ARON },
-    { 10, 10, SPECIES_ABRA },
-    { 10, 10, SPECIES_SABLEYE },
-    { 11, 11, SPECIES_SABLEYE },
-    { 12, 12, SPECIES_SABLEYE },
-    { 10, 10, SPECIES_SABLEYE },
-    { 12, 12, SPECIES_SABLEYE },
-    { 10, 10, SPECIES_SABLEYE },
+    { 11, 13, SPECIES_MAWILE },
+    { 11, 13, SPECIES_MAWILE },
+    { 11, 13, SPECIES_MAKUHITA },
+    { 11, 13, SPECIES_MAKUHITA },
+    { 12, 13, SPECIES_MAKUHITA },
+    { 11, 13, SPECIES_NOSEPASS },
+    { 12, 12, SPECIES_TYRUNT },
+    { 12, 13, SPECIES_AMAURA },
+    { 12, 13, SPECIES_CARBINK },
+    { 13, 13, SPECIES_CARBINK },
+    { 15, 15, SPECIES_NOSEPASS },
+    { 15, 15, SPECIES_NOSEPASS },
 };
 
 const struct WildPokemonInfo gGraniteCave_B2F_LandMonsInfo = { 10, gGraniteCave_B2F_LandMons };
@@ -1016,10 +1016,10 @@ const struct WildPokemonInfo gRoute106_WaterMonsInfo = { 4, gRoute106_WaterMons 
 
 const struct WildPokemon gRoute106_FishingMons[] =
 {
-    { 5, 10, SPECIES_MAGIKARP },
-    { 5, 10, SPECIES_TENTACOOL },
+    { 9, 12, SPECIES_DEWPIDER },
+    { 9, 12, SPECIES_TENTACOOL },
     { 10, 30, SPECIES_MAGIKARP },
-    { 10, 30, SPECIES_TENTACOOL },
+    { 10, 30, SPECIES_CLAMPERL },
     { 10, 30, SPECIES_WAILMER },
     { 25, 30, SPECIES_WAILMER },
     { 30, 35, SPECIES_WAILMER },
@@ -1578,18 +1578,18 @@ const struct WildPokemonInfo gMtPyre_Summit_LandMonsInfo = { 10, gMtPyre_Summit_
 
 const struct WildPokemon gGraniteCave_StevensRoom_LandMons[] =
 {
-    { 7, 7, SPECIES_ZUBAT },
-    { 8, 8, SPECIES_MAKUHITA },
-    { 7, 7, SPECIES_MAKUHITA },
-    { 8, 8, SPECIES_ZUBAT },
-    { 9, 9, SPECIES_MAKUHITA },
-    { 8, 8, SPECIES_ABRA },
-    { 10, 10, SPECIES_MAKUHITA },
-    { 6, 6, SPECIES_MAKUHITA },
-    { 7, 7, SPECIES_ARON },
-    { 8, 8, SPECIES_ARON },
-    { 7, 7, SPECIES_ARON },
-    { 8, 8, SPECIES_ARON },
+    { 13, 14, SPECIES_ROGGENROLA },
+    { 13, 15, SPECIES_ROGGENROLA },
+    { 13, 13, SPECIES_GEODUDE_ALOLAN },
+    { 13, 13, SPECIES_GEODUDE_ALOLAN },
+    { 13, 13, SPECIES_SANDSHREW_ALOLAN },
+    { 13, 14, SPECIES_SANDSHREW_ALOLAN },
+    { 12, 12, SPECIES_GEODUDE_ALOLAN },
+    { 12, 12, SPECIES_SANDSHREW_ALOLAN },
+    { 12, 15, SPECIES_ARON },
+    { 12, 15, SPECIES_ARON },
+    { 5, 5, SPECIES_BELDUM },
+    { 5, 5, SPECIES_BELDUM },
 };
 
 const struct WildPokemonInfo gGraniteCave_StevensRoom_LandMonsInfo = { 10, gGraniteCave_StevensRoom_LandMons };
@@ -2899,13 +2899,13 @@ const struct WildPokemonInfo gDewfordTown_WaterMonsInfo = { 4, gDewfordTown_Wate
 
 const struct WildPokemon gDewfordTown_FishingMons[] =
 {
-    { 5, 10, SPECIES_MAGIKARP },
-    { 5, 10, SPECIES_TENTACOOL },
-    { 10, 30, SPECIES_MAGIKARP },
-    { 10, 30, SPECIES_TENTACOOL },
-    { 10, 30, SPECIES_WAILMER },
-    { 25, 30, SPECIES_WAILMER },
-    { 30, 35, SPECIES_WAILMER },
+    { 9, 12, SPECIES_PSYDUCK },
+    { 10, 12, SPECIES_ARROKUDA },
+    { 10, 30, SPECIES_GOLDUCK },
+    { 10, 30, SPECIES_BARRASKEWDA },
+    { 10, 30, SPECIES_BRUXISH },
+    { 25, 30, SPECIES_CRAMORANT },
+    { 30, 35, SPECIES_GYARADOS },
     { 20, 25, SPECIES_WAILMER },
     { 35, 40, SPECIES_WAILMER },
     { 40, 45, SPECIES_WAILMER },
