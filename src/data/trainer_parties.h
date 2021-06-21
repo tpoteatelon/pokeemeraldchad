@@ -3389,7 +3389,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .lvl = 17,
     .species = SPECIES_TOGEDEMARU,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_CHARGE_BEAM, MOVE_FELL_STINGER, MOVE_NUZZLE, MOVE_SWIFT}
+    .moves = {MOVE_CHARGE_BEAM, MOVE_FELL_STINGER, MOVE_NUZZLE, MOVE_GRASS_KNOT}
     }
 };
 
@@ -3398,23 +3398,29 @@ static const struct TrainerMon sParty_Brawly1[] = {
     .iv = 255,
     .lvl = 20,
     .species = SPECIES_ARIADOS,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_LUCKY_EGG,
+.moves = {MOVE_SWORDS_DANCE, MOVE_SHADOW_SNEAK, MOVE_CROSS_POISON, MOVE_U_TURN}
     },
     {
     .iv = 255,
     .lvl = 22,
     .species = SPECIES_SCYTHER,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_CHARTI_BERRY,
+.moves = {MOVE_U_TURN, MOVE_BUG_BITE, MOVE_DUAL_WINGBEAT, MOVE_BRICK_BREAK}
     },
     {
     .iv = 255,
     .lvl = 21,
     .species = SPECIES_LEDIAN,
+	.heldItem = ITEM_OCCA_BERRY,
+.moves = {MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH, MOVE_MACH_PUNCH, MOVE_U_TURN}
     },
 	{
 	.iv = 255,
 	.lvl = 23,
 	.species = SPECIES_HERACROSS,
+	.heldItem = ITEM_COBA_BERRY,
+.moves = {MOVE_BRICK_BREAK, MOVE_ROCK_BLAST, MOVE_BULLET_SEED, MOVE_PIN_MISSILE}
 	}
 };
 
@@ -4405,12 +4411,12 @@ static const struct TrainerMon sParty_Eddie[] = {
 static const struct TrainerMon sParty_Allen[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_PIDGEY,
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 7,
     .species = SPECIES_SUNKERN,
     }
 };
@@ -8021,12 +8027,12 @@ static const struct TrainerMon sParty_MaxieMtChimney[] = {
 static const struct TrainerMon sParty_Tiana[] = {
     {
     .iv = 0,
-    .lvl = 4,
+    .lvl = 6,
     .species = SPECIES_ODDISH,
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 8,
     .species = SPECIES_SNUBBULL,
     }
 };
@@ -8177,12 +8183,12 @@ static const struct TrainerMon sParty_Crissy[] = {
 static const struct TrainerMon sParty_Rick[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_WEEDLE,
     },
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 6,
     .species = SPECIES_LEDYBA,
     }
 };
@@ -8215,11 +8221,11 @@ static const struct TrainerMon sParty_Jose[] = {
     .iv = 50,
     .lvl = 10,
     .species = SPECIES_KAKUNA,
-    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_HARDEN, MOVE_POISON_STING, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 50,
-    .lvl = 8,
+    .lvl = 13,
     .species = SPECIES_PINECO,
     .moves = {MOVE_SELF_DESTRUCT, MOVE_PROTECT, MOVE_NONE, MOVE_NONE}
     }
@@ -10093,13 +10099,13 @@ static const struct TrainerMon sParty_Marlene[] = {
 static const struct TrainerMon sParty_Devan[] = {
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 12,
     .species = SPECIES_GEODUDE,
     },
     {
     .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_GEODUDE,
+    .lvl = 12,
+    .species = SPECIES_MACHOP,
     }
 };
 
@@ -12430,37 +12436,43 @@ static const struct TrainerMon sParty_Everett[] = {
 static const struct TrainerMon sParty_EddieR1[] = {
     {
     .iv = 255,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_TORKOAL,
+	.ability=ABILITY_HIDDEN,
+	.moves = {MOVE_FLAME_BURST, MOVE_FLAME_CHARGE, MOVE_YAWN, MOVE_GYRO_BALL}
     },
 	{
 	.iv = 255,
-	.lvl = 19,
+	.lvl = 20,
 	.species = SPECIES_IVYSAUR,
-	.moves = {MOVE_SLEEP_POWDER, MOVE_MAGICAL_LEAF, MOVE_TACKLE, MOVE_NONE}
+	.moves = {MOVE_SLEEP_POWDER, MOVE_MAGICAL_LEAF, MOVE_SLUDGE, MOVE_GROWTH}
 	},
 	{
 	.iv = 255,
 	.lvl = 20,
 	.species = SPECIES_DUSKULL,
+	.moves = {MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_NIGHT_SHADE, MOVE_HEX}
 	},
 	{
 	.iv = 255,
 	.lvl = 20,
 	.species = SPECIES_RHYHORN,
+	.moves = {MOVE_BULLDOZE, MOVE_ROCK_BLAST, MOVE_DRILL_RUN, MOVE_AERIAL_ACE}
 	}
 };
 
 static const struct TrainerMon sParty_MJOE[] = {
     {
     .iv = 255,
-    .lvl = 6,
+    .lvl = 8,
     .species = SPECIES_MAREEP,
+	.moves = {MOVE_THUNDER_WAVE, MOVE_THUNDER_SHOCK, MOVE_FLATTER, MOVE_CHARGE}
     },
 	{
 	.iv = 255,
 	.lvl = 8,
 	.species = SPECIES_NATU,
+	.moves = {MOVE_FEATHER_DANCE, MOVE_SUCKER_PUNCH, MOVE_AIR_CUTTER, MOVE_CONFUSION}
 	}
 };
 
