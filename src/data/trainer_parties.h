@@ -12439,13 +12439,14 @@ static const struct TrainerMon sParty_EddieR1[] = {
     .iv = 255,
     .lvl = 20,
     .species = SPECIES_TORKOAL,
-	.ability=ABILITY_HIDDEN,
+	.ability=ABILITY_SLOT_2,
 	.moves = {MOVE_FLAME_BURST, MOVE_FLAME_CHARGE, MOVE_YAWN, MOVE_GYRO_BALL}
     },
 	{
 	.iv = 255,
 	.lvl = 20,
 	.species = SPECIES_IVYSAUR,
+	.ability = ABILITY_HIDDEN,
 	.moves = {MOVE_SLEEP_POWDER, MOVE_MAGICAL_LEAF, MOVE_SLUDGE, MOVE_GROWTH}
 	},
 	{
