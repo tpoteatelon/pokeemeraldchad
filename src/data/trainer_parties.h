@@ -3430,7 +3430,7 @@ static const struct TrainerMon sParty_Brawly1[] = {
 	.lvl = 23,
 	.species = SPECIES_HERACROSS,
 	.heldItem = ITEM_COBA_BERRY,
-.moves = {MOVE_BRICK_BREAK, MOVE_ROCK_BLAST, MOVE_AERIAL_ACE, MOVE_PIN_MISSILE}
+.moves = {MOVE_BRICK_BREAK, MOVE_NONE, MOVE_AERIAL_ACE, MOVE_BUG_BITE}
 	}
 };
 
@@ -3438,9 +3438,10 @@ static const struct TrainerMon sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 34,
-    .species = SPECIES_GREEDENT,
-    .heldItem = ITEM_APICOT_BERRY,
-    .moves = {MOVE_STUFF_CHEEKS, MOVE_SLACK_OFF, MOVE_THIEF, MOVE_BODY_PRESS}
+    .species = SPECIES_KECLEON,
+    .heldItem = ITEM_NONE,
+	.ability = ABILITY_HIDDEN,
+    .moves = {MOVE_SHADOW_SNEAK, MOVE_CONFUSE_RAY, MOVE_FEINT_ATTACK, MOVE_ICE_PUNCH}
     },
     {
     .iv = 200,
