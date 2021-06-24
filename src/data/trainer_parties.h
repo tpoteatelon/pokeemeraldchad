@@ -3461,14 +3461,15 @@ static const struct TrainerMon sParty_Wattson1[] = {
     .lvl = 34,
     .species = SPECIES_TAUROS,
     .heldItem = ITEM_EXPERT_BELT,
-	.ability = ABILITY_SLOT_2
+	.ability = ABILITY_SLOT_2,
     .moves = {MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_THRASH, MOVE_PSYCHIC}
     },
-	 .iv = 255,
+	{
+	.iv = 255,
     .lvl = 35,
     .species = SPECIES_LICKILICKY,
     .heldItem = ITEM_LEFTOVERS,
-	.ability = ABILITY_SLOT_2
+	.ability = ABILITY_SLOT_2,
     .moves = {MOVE_SLACK_OFF, MOVE_STOCKPILE, MOVE_FLAMETHROWER, MOVE_BODY_SLAM}
     }
 };
@@ -6832,18 +6833,34 @@ static const struct TrainerMon sParty_BrendanRoute103Mudkip[] = {
 static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 27,
+    .species = SPECIES_GURDURR,
+	.moves = {MOVE_BULK_UP, MOVE_ROCK_SLIDE, MOVE_FIRE_PUNCH, MOVE_BRICK_BREAK}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 27,
+    .species = SPECIES_GROWLITHE,
+	.moves = {MOVE_FIRE_FANG, MOVE_BITE, MOVE_WILL_O_WISP, MOVE_PSYCHIC_FANGS}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC_MIDNIGHT,
+	.moves = {MOVE_COUNTER, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_METANG,
+	.moves = {MOVE_ZEN_HEADBUTT, MOVE_BULLET_PUNCH, MOVE_FLASH_CANNON, MOVE_ICE_PUNCH}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_GROVYLE,
+	.moves = {MOVE_FURY_CUTTER, MOVE_LEAF_BLADE, MOVE_BRICK_BREAK, MOVE_THUNDER_PUNCH},
+	.evs = {50,200,25,0,25,25}
     }
 };
 
@@ -6876,18 +6893,34 @@ static const struct TrainerMon sParty_BrendanRoute103Treecko[] = {
 static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 27,
+    .species = SPECIES_DUOSION,
+	.moves = {MOVE_PSYSHOCK, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_SIGNAL_BEAM}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .lvl = 27,
+    .species = SPECIES_AZUMARILL,
+	.moves = {MOVE_AQUA_TAIL, MOVE_PLAY_ROUGH, MOVE_BOUNCE, MOVE_AQUA_JET}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC,
+	.moves = {MOVE_ACCELEROCK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_GOOMY,
+	.moves = {MOVE_DRAGON_BREATH, MOVE_WATER_PULSE, MOVE_MEGA_DRAIN, MOVE_COUNTER}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_COMBUSKEN,
+	.moves = {MOVE_FLAMETHROWER, MOVE_BOUNCE, MOVE_DOUBLE_KICK, MOVE_FLAME_CHARGE},
+	.evs = {50,100,25,100,25,50}
     }
 };
 
@@ -6920,18 +6953,34 @@ static const struct TrainerMon sParty_BrendanRoute103Torchic[] = {
 static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .lvl = 27,
+    .species = SPECIES_GRANBULL,
+	.moves = {MOVE_COVET, MOVE_BRICK_BREAK, MOVE_BITE, MOVE_BULK_UP}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 27,
+    .species = SPECIES_SKORUPI,
+	.moves = {MOVE_CROSS_POISON, MOVE_BUG_BITE, MOVE_SUCKER_PUNCH, MOVE_SWORDS_DANCE}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC_DUSK,
+	.moves = {MOVE_ACCELEROCK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_DRAGONAIR,
+	.moves = {MOVE_SLAM, MOVE_THUNDER_WAVE, MOVE_DRAGON_TAIL, MOVE_DRAGON_RAGE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_MARSHTOMP,
+	.moves = {MOVE_ROCK_SLIDE, MOVE_WATER_PULSE, MOVE_BULLDOZE, MOVE_ICE_PUNCH},
+	.evs = {50,50,25,50,25,200}
     }
 };
 
@@ -6962,20 +7011,36 @@ static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
 };
 
 static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
-    {
+     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 27,
+    .species = SPECIES_GURDURR,
+	.moves = {MOVE_BULK_UP, MOVE_ROCK_SLIDE, MOVE_FIRE_PUNCH, MOVE_BRICK_BREAK}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 27,
+    .species = SPECIES_GROWLITHE,
+	.moves = {MOVE_FIRE_FANG, MOVE_BITE, MOVE_WILL_O_WISP, MOVE_PSYCHIC_FANGS}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC_MIDNIGHT,
+	.moves = {MOVE_COUNTER, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_METANG,
+	.moves = {MOVE_ZEN_HEADBUTT, MOVE_BULLET_PUNCH, MOVE_FLASH_CANNON, MOVE_ICE_PUNCH}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_GROVYLE,
+	.moves = {MOVE_FURY_CUTTER, MOVE_LEAF_BLADE, MOVE_BRICK_BREAK, MOVE_THUNDER_PUNCH},
+	.evs = {50,200,25,0,25,25}
     }
 };
 
@@ -7008,18 +7073,34 @@ static const struct TrainerMon sParty_MayRoute103Treecko[] = {
 static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 27,
+    .species = SPECIES_DUOSION,
+	.moves = {MOVE_PSYSHOCK, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_SIGNAL_BEAM}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .lvl = 27,
+    .species = SPECIES_AZUMARILL,
+	.moves = {MOVE_AQUA_TAIL, MOVE_PLAY_ROUGH, MOVE_BOUNCE, MOVE_AQUA_JET}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC,
+	.moves = {MOVE_ACCELEROCK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_GOOMY,
+	.moves = {MOVE_DRAGON_BREATH, MOVE_WATER_PULSE, MOVE_MEGA_DRAIN, MOVE_COUNTER}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_COMBUSKEN,
+	.moves = {MOVE_FLAMETHROWER, MOVE_BOUNCE, MOVE_DOUBLE_KICK, MOVE_FLAME_CHARGE},
+	.evs = {50,100,25,100,25,50}
     }
 };
 
@@ -7052,18 +7133,34 @@ static const struct TrainerMon sParty_MayRoute103Torchic[] = {
 static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .lvl = 27,
+    .species = SPECIES_GRANBULL,
+	.moves = {MOVE_COVET, MOVE_BRICK_BREAK, MOVE_BITE, MOVE_BULK_UP}
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 27,
+    .species = SPECIES_SKORUPI,
+	.moves = {MOVE_CROSS_POISON, MOVE_BUG_BITE, MOVE_SUCKER_PUNCH, MOVE_SWORDS_DANCE}
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 28,
+    .species = SPECIES_LYCANROC_DUSK,
+	.moves = {MOVE_ACCELEROCK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB, MOVE_BITE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 28,
+    .species = SPECIES_DRAGONAIR,
+	.moves = {MOVE_SLAM, MOVE_THUNDER_WAVE, MOVE_DRAGON_TAIL, MOVE_DRAGON_RAGE}
+    },
+	 {
+    .iv = 50,
+    .lvl = 29,
     .species = SPECIES_MARSHTOMP,
+	.moves = {MOVE_ROCK_SLIDE, MOVE_WATER_PULSE, MOVE_BULLDOZE, MOVE_ICE_PUNCH},
+	.evs = {50, 50, 25, 50, 25, 200}
     }
 };
 
@@ -10190,9 +10287,9 @@ static const struct TrainerMon sParty_Johnson[] = {
 static const struct TrainerMon sParty_Melina[] = {
     {
     .iv = 0,
-    .lvl = 17,
+    .lvl = 31,
     .species = SPECIES_DIGGERSBY,
-	.abiliy = ABILITY_HIDDEN
+	.ability = ABILITY_HIDDEN
     }
 };
 
