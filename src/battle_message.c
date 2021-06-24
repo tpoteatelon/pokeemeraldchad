@@ -695,10 +695,12 @@ static const u8 sText_CuriousMedicineEnters[] = _("{B_EFF_NAME_WITH_PREFIX}'s\ns
 static const u8 sText_CanActFaster[] = _("{B_ATK_NAME_WITH_PREFIX} can act faster,\nthanks to {B_LAST_ITEM}!");
 static const u8 sText_MicleBerryActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} boosted the accuracy of its\nnext move using {B_LAST_ITEM}!");
 static const u8 sText_PkmnGravitumActivates[] = _("GRAVITY intesified!");
+static const u8 sText_PkmnKnuckleheadActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s moves \nbecame physical!");
 
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
+	//[STRINGID_PKMNKNUCKLEHEADACTIVATES - 12] = sText_PkmnKnuckleheadActivates,
 	[STRINGID_PKMNGRAVITUMACTIVATES - 12] = sText_PkmnGravitumActivates,
     [STRINGID_MICLEBERRYACTIVATES - 12] = sText_MicleBerryActivates,
     [STRINGID_CANACTFASTERTHANKSTO - 12] = sText_CanActFaster,
@@ -1182,6 +1184,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_POISONHEALHPUP - 12] = sText_PoisonHealHpUp,
     [STRINGID_BADDREAMSDMG - 12] = sText_BadDreamsDmg,
     [STRINGID_MOLDBREAKERENTERS - 12] = sText_MoldBreakerEnters,
+		//custom
+	[STRINGID_KNUCKLEHEADENTERS - 12] = sText_PkmnKnuckleheadActivates,
+
     [STRINGID_TERAVOLTENTERS - 12] = sText_TeravoltEnters,
     [STRINGID_TURBOBLAZEENTERS - 12] = sText_TurboblazeEnters,
     [STRINGID_SLOWSTARTENTERS - 12] = sText_SlowStartEnters,
@@ -1299,6 +1304,7 @@ const u16 gSwitchInAbilityStringIds[] =
     [MULTI_SWITCHIN_SCREENCLEANER] = STRINGID_SCREENCLEANERENTERS,
     [MULTI_SWITCHIN_ASONE] = STRINGID_ASONEENTERS,
     [MULTI_SWITCHIN_CURIOUS_MEDICINE] = STRINGID_CURIOUSMEDICINEENTERS,
+	[MULTI_SWITCHIN_KNUCKLEHEAD] = STRINGID_KNUCKLEHEADENTERS,
 };
 
 const u16 gMissStringIds[] =
