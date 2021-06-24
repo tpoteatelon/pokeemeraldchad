@@ -7951,5 +7951,3 @@ BattleScript_GravitumActivates::
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
-
-
