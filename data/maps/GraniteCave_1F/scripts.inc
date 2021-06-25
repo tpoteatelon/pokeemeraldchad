@@ -21,7 +21,6 @@ GraniteCave_1f_EventScript_EddieInvisible::
 GraniteCave_1F_EventScript_EddieRivalBattle::
 	lockall
 	addobject LOCALID_EDDIE
-	setvar VAR_GRANITE_CAVE_1F_STATE, 1
 	applymovement 3, Movement_EddieR
 	waitmovement 0
 	trainerbattle_double TRAINER_EDDIE_R, GraniteCave_1F_Text_EddieRivalIntro, GraniteCave_1F_EddieRivalTextDefeated, GraniteCave_1F_Text_NotEnoughMons, GraniteCave_1F_EventScript_EddieAftermath
@@ -30,6 +29,7 @@ GraniteCave_1F_EventScript_EddieRivalBattle::
 
  GraniteCave_1F_EventScript_EddieAftermath::
 	msgbox GraniteCave_1F_Text_EddieRivalPostBattle
+	setvar VAR_GRANITE_CAVE_1F_STATE, 1
 	applymovement 3, Movement_EddieFuckOff
 	waitmovement 0
 	removeobject LOCALID_EDDIE

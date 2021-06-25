@@ -7542,6 +7542,15 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
         defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
         usesDefStat = TRUE;
     }
+	//pokemon with knucklehead's moves use the def stat
+	if (GetBattlerAbility(battlerAtk) == ABILITY_KNUCKLEHEAD) {
+		if (IS_MOVE_SPECIAL(move))
+		{
+			defStat = def;
+			defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
+			usesDefStat = TRUE;
+		}
+	}
     else // is special
     {
         defStat = spDef;
