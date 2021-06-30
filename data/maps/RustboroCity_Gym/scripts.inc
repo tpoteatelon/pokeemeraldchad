@@ -179,13 +179,18 @@ RustboroCity_Gym_Text_MarcPostBattle: @ 82135C0
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro: @ 821362A
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
-	.string "POKéMON GYM LEADER.\p"
-	.string "I became a GYM LEADER so that I might\n"
-	.string "apply what I learned at the POKéMON\l"
-	.string "TRAINER'S SCHOOL in battle.\p"
-	.string "Would you kindly demonstrate how you\n"
-	.string "battle, and with which POKéMON?$"
+	.string "Welcome to the RUSTBORO GYM!\nI can't "
+	.string "wait to have an energetic match!\p"
+	.string "Just to let you know,\n"
+	.string "I was a high-ranking gym leader\p"
+	.string "in another region. I was given a\n"
+	.string "special assignment to test trainers\p"
+	.string "in the HOENN region. Do you think you can\n"
+	.string "handle me? Lets...\p"
+	.string "SHOCK.\n"
+	.string "THE.\p"
+	.string "SYSTEM!\n"
+	.string "$"
 
 RustboroCity_Gym_Text_RoxanneDefeat: @ 821370B
 	.string "So…\n"

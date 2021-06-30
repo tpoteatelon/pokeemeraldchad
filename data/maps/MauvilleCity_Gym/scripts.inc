@@ -107,6 +107,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated:: @ 820DF2B
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
+	givemon SPECIES_SILVALLY, 40, ITEM_WATER_MEMORY
 	waitfanfare
 	closemessage
 	delay 30

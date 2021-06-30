@@ -312,7 +312,7 @@ const struct WildPokemonInfo gRoute105_FishingMonsInfo = { 30, gRoute105_Fishing
 
 const struct WildPokemon gRoute110_LandMons[] =
 {
-    { 21, 24, SPECIES_TYROGUE },
+    { 19, 19, SPECIES_TYROGUE },
     { 22, 24, SPECIES_LICKITUNG },
     { 22, 22, SPECIES_NOCTOWL },
     { 21, 23, SPECIES_PIKACHU },
