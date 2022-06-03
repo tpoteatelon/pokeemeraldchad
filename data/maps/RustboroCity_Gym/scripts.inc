@@ -179,18 +179,14 @@ RustboroCity_Gym_Text_MarcPostBattle: @ 82135C0
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro: @ 821362A
-	.string "Welcome to the RUSTBORO GYM!\nI can't "
-	.string "wait to have an energetic match!\p"
-	.string "Just to let you know,\n"
-	.string "I was a high-ranking gym leader\p"
-	.string "in another region. I was given a\n"
-	.string "special assignment to test trainers\p"
-	.string "in the HOENN region. Do you think you can\n"
-	.string "handle me? Lets...\p"
-	.string "SHOCK.\n"
-	.string "THE.\p"
-	.string "SYSTEM!\n"
-	.string "$"
+	.string "Welcome to the RUSTBORO Gym! I can't\n"
+	.string "wait to have an energetic match! Just\l"
+	.string "to let you know, I was a high-ranking\l"
+	.string "gym leader in another region. I was\l"
+	.string "given a special assignment to test\l"
+	.string "trainers in the HOENN region. Do you\l"
+	.string "think you can handle me? Let's...\l"
+	.string "SHOCK. THE. SYSTEM!$"
 
 RustboroCity_Gym_Text_RoxanneDefeat: @ 821370B
 	.string "So…\n"
