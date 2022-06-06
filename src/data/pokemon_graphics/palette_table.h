@@ -812,13 +812,13 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(MELMETAL, gMonPalette_Melmetal),
     SPECIES_PAL(GROOKEY, gMonPalette_Grookey),
     SPECIES_PAL(THWACKEY, gMonPalette_Thwackey),
-    SPECIES_PAL(RILLABOOM, gMonPalette_DoubleQuestionMark/*gMonPalette_Rillaboom*/),
+    SPECIES_PAL(RILLABOOM, gMonPalette_Rillaboom),
     SPECIES_PAL(SCORBUNNY, gMonPalette_Scorbunny),
     SPECIES_PAL(RABOOT, gMonPalette_Raboot),
     SPECIES_PAL(CINDERACE, gMonPalette_Cinderace),
     SPECIES_PAL(SOBBLE, gMonPalette_Sobble),
     SPECIES_PAL(DRIZZILE, gMonPalette_Drizzile),
-    SPECIES_PAL(INTELEON, gMonPalette_DoubleQuestionMark/*gMonPalette_Inteleon*/),
+    SPECIES_PAL(INTELEON, gMonPalette_Inteleon),
     SPECIES_PAL(SKWOVET, gMonPalette_Skwovet),
     SPECIES_PAL(GREEDENT, gMonPalette_Greedent),
     SPECIES_PAL(ROOKIDEE, gMonPalette_Rookidee),
@@ -894,7 +894,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(KUBFU, gMonPalette_Kubfu),
     SPECIES_PAL(URSHIFU, gMonPalette_Urshifu),
     SPECIES_PAL(ZARUDE, gMonPalette_Zarude),
-    SPECIES_PAL(REGIELEKI, gMonPalette_DoubleQuestionMark/*gMonPalette_Regieleki*/),
+    SPECIES_PAL(REGIELEKI, gMonPalette_Regieleki),
     SPECIES_PAL(REGIDRAGO, gMonPalette_Regidrago),
     SPECIES_PAL(GLASTRIER, gMonPalette_Glastrier),
     SPECIES_PAL(SPECTRIER, gMonPalette_Spectrier),
@@ -1235,7 +1235,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
 
     SPECIES_PAL(MAGEARNA_ORIGINAL_COLOR, gMonPalette_MagearnaOriginalColor),
 
-SPECIES_PAL(CRAMORANT_GULPING, gMonPalette_CramorantGulping),
+    SPECIES_PAL(CRAMORANT_GULPING, gMonPalette_CramorantGulping),
     SPECIES_PAL(CRAMORANT_GORGING, gMonPalette_CramorantGorging),
 
     SPECIES_PAL(TOXTRICITY_LOW_KEY, gMonPalette_ToxtricityLowKey),
@@ -1263,7 +1263,7 @@ SPECIES_PAL(CRAMORANT_GULPING, gMonPalette_CramorantGulping),
 
     SPECIES_PAL(ZAMAZENTA_CROWNED_SHIELD, gMonPalette_ZamazentaCrownedShield),
 
-    SPECIES_PAL(ETERNATUS_ETERNAMAX, gMonPalette_Eternatus/*Eternamax*/),
+    SPECIES_PAL(ETERNATUS_ETERNAMAX, gMonPalette_EternatusEternamax),
 
     SPECIES_PAL(URSHIFU_RAPID_STRIKE_STYLE, gMonPalette_UrshifuRapidStrikeStyle),
 
@@ -1278,4 +1278,18 @@ SPECIES_PAL(CRAMORANT_GULPING, gMonPalette_CramorantGulping),
 const struct CompressedSpritePalette gMonPaletteTableFemale[] =
 {
     SPECIES_PAL(EEVEE, gMonPalette_Eevee),
+    SPECIES_PAL(COMBEE, gMonPalette_Combee),
+    SPECIES_PAL(STARLY, gMonPalette_Starly),
+    SPECIES_PAL(STARAVIA, gMonPalette_Staravia),
+    SPECIES_PAL(STARAPTOR, gMonPalette_Staraptor),
+    SPECIES_PAL(BIDOOF, gMonPalette_Bidoof),
+    SPECIES_PAL(KRICKETOT, gMonPalette_Kricketot),
+    SPECIES_PAL(KRICKETUNE, gMonPalette_Kricketune),
+    SPECIES_PAL(SHINX, gMonPalette_Shinx),
+    SPECIES_PAL(HIPPOPOTAS, gMonPalette_HippopotasF),
+    SPECIES_PAL(HIPPOWDON, gMonPalette_HippowdonF),
+    SPECIES_PAL(UNFEZANT, gMonPalette_UnfezantF),
+    SPECIES_PAL(FRILLISH, gMonPalette_FrillishF),
+    SPECIES_PAL(JELLICENT, gMonPalette_JellicentF),
+    SPECIES_PAL(PYROAR, gMonPalette_PyroarF),
 };

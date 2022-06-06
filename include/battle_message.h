@@ -1,7 +1,13 @@
 #ifndef GUARD_BATTLE_MESSAGE_H
 #define GUARD_BATTLE_MESSAGE_H
 
-#define TEXT_BUFF_ARRAY_COUNT   16
+#include "constants/battle_config.h"
+
+#if B_EXPANDED_ABILITY_NAMES == TRUE
+    #define TEXT_BUFF_ARRAY_COUNT   17
+#else
+    #define TEXT_BUFF_ARRAY_COUNT   16
+#endif
 
 // for 0xFD
 #define B_TXT_BUFF1 0x0
@@ -241,7 +247,6 @@ extern const u8* const gBattleStringsTable[];
 extern const u8* const gStatNamesTable[];
 extern const u8* const gPokeblockWasTooXStringTable[];
 extern const u8* const gRefereeStringsTable[];
-extern const u8* const gStatNamesTable2[];
 extern const u8 *const gRoundsStringTable[];
 
 extern const u8 gText_PkmnIsEvolving[];
@@ -288,7 +293,7 @@ extern const u8 gText_Loss[];
 extern const u8 gText_Draw[];
 extern const u8 gText_StatSharply[];
 extern const u8 gText_StatRose[];
-extern const u8 gText_PkmnsStatChanged2[];
+extern const u8 gText_DefendersStatRose[];
 extern const u8 gText_PkmnGettingPumped[];
 extern const u8 gText_PkmnShroudedInMist[];
 extern const u8 gText_PkmnsXPreventsSwitching[];
@@ -311,6 +316,5 @@ extern const u8 gText_BattleTourney[];
 
 extern const u16 gMissStringIds[];
 extern const u16 gStatUpStringIds[];
-extern const u16 gTrappingMoves[];
 
 #endif // GUARD_BATTLE_MESSAGE_H

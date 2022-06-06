@@ -812,13 +812,13 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(MELMETAL, gMonFrontPic_Melmetal),
     SPECIES_SPRITE(GROOKEY, gMonFrontPic_Grookey),
     SPECIES_SPRITE(THWACKEY, gMonFrontPic_Thwackey),
-    SPECIES_SPRITE(RILLABOOM, gMonFrontPic_DoubleQuestionMark/*gMonFrontPic_Rillaboom*/),
+    SPECIES_SPRITE(RILLABOOM, gMonFrontPic_Rillaboom),
     SPECIES_SPRITE(SCORBUNNY, gMonFrontPic_Scorbunny),
     SPECIES_SPRITE(RABOOT, gMonFrontPic_Raboot),
     SPECIES_SPRITE(CINDERACE, gMonFrontPic_Cinderace),
     SPECIES_SPRITE(SOBBLE, gMonFrontPic_Sobble),
     SPECIES_SPRITE(DRIZZILE, gMonFrontPic_Drizzile),
-    SPECIES_SPRITE(INTELEON, gMonFrontPic_DoubleQuestionMark/*gMonFrontPic_Inteleon*/),
+    SPECIES_SPRITE(INTELEON, gMonFrontPic_Inteleon),
     SPECIES_SPRITE(SKWOVET, gMonFrontPic_Skwovet),
     SPECIES_SPRITE(GREEDENT, gMonFrontPic_Greedent),
     SPECIES_SPRITE(ROOKIDEE, gMonFrontPic_Rookidee),
@@ -894,7 +894,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(KUBFU, gMonFrontPic_Kubfu),
     SPECIES_SPRITE(URSHIFU, gMonFrontPic_Urshifu),
     SPECIES_SPRITE(ZARUDE, gMonFrontPic_Zarude),
-    SPECIES_SPRITE(REGIELEKI, gMonFrontPic_DoubleQuestionMark/*gMonFrontPic_Regieleki*/),
+    SPECIES_SPRITE(REGIELEKI, gMonFrontPic_Regieleki),
     SPECIES_SPRITE(REGIDRAGO, gMonFrontPic_Regidrago),
     SPECIES_SPRITE(GLASTRIER, gMonFrontPic_Glastrier),
     SPECIES_SPRITE(SPECTRIER, gMonFrontPic_Spectrier),
@@ -1263,7 +1263,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
 
     SPECIES_SPRITE(ZAMAZENTA_CROWNED_SHIELD, gMonFrontPic_ZamazentaCrownedShield),
 
-    SPECIES_SPRITE(ETERNATUS_ETERNAMAX, gMonFrontPic_Eternatus/*Eternamax*/),
+    SPECIES_SPRITE(ETERNATUS_ETERNAMAX, gMonFrontPic_EternatusEternamax),
 
     SPECIES_SPRITE(URSHIFU_RAPID_STRIKE_STYLE, gMonFrontPic_UrshifuRapidStrikeStyle),
 
@@ -1278,4 +1278,18 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
 const struct CompressedSpriteSheet gMonFrontPicTableFemale[] =
 {
     SPECIES_SPRITE(EEVEE, gMonFrontPic_EeveeF),
+    SPECIES_SPRITE(STARLY, gMonFrontPic_StarlyF),
+    SPECIES_SPRITE(STARAVIA, gMonFrontPic_StaraviaF),
+    SPECIES_SPRITE(STARAPTOR, gMonFrontPic_StaraptorF),
+    SPECIES_SPRITE(BIDOOF, gMonFrontPic_BidoofF),
+    SPECIES_SPRITE(KRICKETOT, gMonFrontPic_KricketotF),
+    SPECIES_SPRITE(KRICKETUNE, gMonFrontPic_KricketuneF),
+    SPECIES_SPRITE(SHINX, gMonFrontPic_ShinxF),
+    SPECIES_SPRITE(COMBEE, gMonFrontPic_CombeeF),
+    SPECIES_SPRITE(HIPPOPOTAS, gMonFrontPic_HippopotasF),
+    SPECIES_SPRITE(HIPPOWDON, gMonFrontPic_Hippowdon),
+    SPECIES_SPRITE(UNFEZANT, gMonFrontPic_UnfezantF),
+    SPECIES_SPRITE(FRILLISH, gMonFrontPic_FrillishF),
+    SPECIES_SPRITE(JELLICENT, gMonFrontPic_JellicentF),
+    SPECIES_SPRITE(PYROAR, gMonFrontPic_PyroarF),
 };

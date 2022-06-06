@@ -18,7 +18,6 @@
 #include "constants/frontier_util.h"
 #include "constants/abilities.h"
 #include "constants/battle_config.h"
-#include "constants/easy_chat.h"
 #include "constants/layouts.h"
 #include "constants/rgb.h"
 #include "constants/trainers.h"
@@ -712,7 +711,7 @@ static void SavePikeChallenge(void)
     gSaveBlock2Ptr->frontier.challengeStatus = gSpecialVar_0x8005;
     VarSet(VAR_TEMP_0, 0);
     gSaveBlock2Ptr->frontier.challengePaused = TRUE;
-    save_serialize_map();
+    SaveMapView();
     TrySavingData(SAVE_LINK);
 }
 
@@ -821,7 +820,7 @@ static bool8 DoesAbilityPreventStatus(struct Pokemon *mon, u32 status)
             ret = TRUE;
         break;
     case STATUS1_BURN:
-        if (ability == ABILITY_WATER_VEIL)
+        if (ability == ABILITY_WATER_VEIL || ability == ABILITY_WATER_BUBBLE)
             ret = TRUE;
         break;
     case STATUS1_PARALYSIS:
