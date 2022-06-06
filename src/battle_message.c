@@ -1778,6 +1778,10 @@ static const u8 sText_Opposing1[] = _("The opposing");
 static const u8 sText_Your2[] = _("your");
 static const u8 sText_Opposing2[] = _("the opposing");
 
+static const u8 sText_EdLastSwitchIn[] = _("ED: Fuck off...\p");
+static const u8 sText_EdLastLowHp[] = _("ED: Pokemon is serious business..\p");
+static const u8 sText_EdFirstDown[] = _("ED: This..\nThis is a worrying trend.\p");
+
 // This is four lists of moves which use a different attack string in Japanese
 // to the default. See the documentation for ChooseTypeOfMoveUsedString for more detail.
 static const u16 sGrammarMoveUsedTable[] =
@@ -3707,7 +3711,7 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-    {0x291, sText_AarghAlmostHadIt, sText_BoxIsFull, sText_123Poof},
+    {TRAINER_EDDIE_R, sText_EdLastSwitchIn, sText_EdLastLowHp, sText_EdFirstDown},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)
