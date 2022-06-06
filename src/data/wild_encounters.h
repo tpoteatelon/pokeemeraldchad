@@ -421,18 +421,18 @@ const struct WildPokemonInfo gRoute111_FishingMonsInfo = { 30, gRoute111_Fishing
 
 const struct WildPokemon gRoute112_LandMons[] =
 {
-    { 15, 15, SPECIES_NUMEL },
-    { 15, 15, SPECIES_NUMEL },
-    { 15, 15, SPECIES_MARILL },
-    { 14, 14, SPECIES_NUMEL },
-    { 14, 14, SPECIES_NUMEL },
-    { 14, 14, SPECIES_MARILL },
-    { 16, 16, SPECIES_NUMEL },
-    { 16, 16, SPECIES_MARILL },
-    { 16, 16, SPECIES_NUMEL },
-    { 16, 16, SPECIES_NUMEL },
-    { 16, 16, SPECIES_NUMEL },
-    { 16, 16, SPECIES_NUMEL },
+    { 28, 28, SPECIES_ARBOK },
+    { 28, 28, SPECIES_ELEKID },
+    { 28, 28, SPECIES_MAGBY },
+    { 28, 28, SPECIES_SWABLU },
+    { 27, 27, SPECIES_SALANDIT },
+    { 29, 29, SPECIES_SWABLU },
+    { 28, 28, SPECIES_GLIGAR },
+    { 28, 28, SPECIES_RHYHORN },
+    { 28, 28, SPECIES_FEAROW },
+    { 28, 28, SPECIES_RABOOT },
+    { 30, 30, SPECIES_TURTONATOR },
+    { 30, 30, SPECIES_TURTONATOR },
 };
 
 const struct WildPokemonInfo gRoute112_LandMonsInfo = { 20, gRoute112_LandMons };
@@ -443,18 +443,18 @@ const struct WildPokemonInfo gRoute112_LandMonsInfo = { 20, gRoute112_LandMons }
 
 const struct WildPokemon gRoute113_LandMons[] =
 {
-    { 15, 15, SPECIES_SPINDA },
-    { 15, 15, SPECIES_SPINDA },
-    { 15, 15, SPECIES_SLUGMA },
-    { 14, 14, SPECIES_SPINDA },
-    { 14, 14, SPECIES_SPINDA },
-    { 14, 14, SPECIES_SLUGMA },
-    { 16, 16, SPECIES_SPINDA },
-    { 16, 16, SPECIES_SLUGMA },
-    { 16, 16, SPECIES_SPINDA },
-    { 16, 16, SPECIES_SKARMORY },
-    { 16, 16, SPECIES_SPINDA },
-    { 16, 16, SPECIES_SKARMORY },
+    { 33, 33, SPECIES_JIGGLYPUFF },
+    { 34, 34, SPECIES_HITMONCHAN },
+    { 34, 34, SPECIES_HITMONLEE },
+    { 34, 34, SPECIES_HITMONTOP },
+    { 34, 34, SPECIES_DUGTRIO },
+    { 34, 34, SPECIES_SKARMORY },
+    { 34, 34, SPECIES_BRAIXEN },
+    { 34, 34, SPECIES_TORRACAT },
+    { 35, 35, SPECIES_SKARMORY },
+    { 35, 35, SPECIES_DUGTRIO },
+    { 35, 35, SPECIES_BRAIXEN },
+    { 35, 35, SPECIES_TORRACAT },
 };
 
 const struct WildPokemonInfo gRoute113_LandMonsInfo = { 20, gRoute113_LandMons };
@@ -465,18 +465,18 @@ const struct WildPokemonInfo gRoute113_LandMonsInfo = { 20, gRoute113_LandMons }
 
 const struct WildPokemon gRoute114_LandMons[] =
 {
-    { 16, 16, SPECIES_SWABLU },
-    { 16, 16, SPECIES_LOTAD },
-    { 17, 17, SPECIES_SWABLU },
-    { 15, 15, SPECIES_SWABLU },
-    { 15, 15, SPECIES_LOTAD },
-    { 16, 16, SPECIES_LOMBRE },
-    { 16, 16, SPECIES_LOMBRE },
-    { 18, 18, SPECIES_LOMBRE },
-    { 17, 17, SPECIES_SEVIPER },
-    { 15, 15, SPECIES_SEVIPER },
-    { 17, 17, SPECIES_SEVIPER },
-    { 15, 15, SPECIES_NUZLEAF },
+    { 36, 36, SPECIES_CORVISQUIRE },
+    { 33, 33, SPECIES_LITLEO },
+    { 34, 34, SPECIES_NUZLEAF },
+    { 34, 34, SPECIES_LOMBRE },
+    { 35, 35, SPECIES_RUFFLET },
+    { 35, 35, SPECIES_VULLABY },
+    { 35, 35, SPECIES_RUFFLET },
+    { 35, 35, SPECIES_VULLABY },
+    { 35, 35, SPECIES_FROGADIER },
+    { 35, 35, SPECIES_KANGASKHAN },
+    { 35, 35, SPECIES_FROGADIER },
+    { 35, 35, SPECIES_KANGASKHAN },
 };
 
 const struct WildPokemonInfo gRoute114_LandMonsInfo = { 20, gRoute114_LandMons };
@@ -508,16 +508,16 @@ const struct WildPokemonInfo gRoute114_RockSmashMonsInfo = { 20, gRoute114_RockS
 
 const struct WildPokemon gRoute114_FishingMons[] =
 {
-    { 5, 10, SPECIES_MAGIKARP },
-    { 5, 10, SPECIES_GOLDEEN },
-    { 10, 30, SPECIES_MAGIKARP },
-    { 10, 30, SPECIES_GOLDEEN },
-    { 10, 30, SPECIES_BARBOACH },
-    { 25, 30, SPECIES_BARBOACH },
-    { 30, 35, SPECIES_BARBOACH },
-    { 20, 25, SPECIES_BARBOACH },
-    { 35, 40, SPECIES_BARBOACH },
-    { 40, 45, SPECIES_BARBOACH },
+    { 35, 35, SPECIES_TYNAMO },
+    { 34, 34, SPECIES_SQUIRTLE },
+    { 35, 35, SPECIES_EELEKTRIK },
+    { 35, 35, SPECIES_WARTORTLE },
+    { 35, 35, SPECIES_DRAGONAIR },
+    { 55, 55, SPECIES_EELEKTRIK },
+    { 55, 55, SPECIES_BLASTOISE },
+    { 54, 54, SPECIES_DRAGONAIR },
+    { 54, 54, SPECIES_DRAGONAIR },
+    { 55, 55, SPECIES_DRAGONITE },
 };
 
 const struct WildPokemonInfo gRoute114_FishingMonsInfo = { 30, gRoute114_FishingMons };
@@ -909,18 +909,18 @@ const struct WildPokemonInfo gGraniteCave_B2F_RockSmashMonsInfo = { 20, gGranite
 
 const struct WildPokemon gFieryPath_LandMons[] =
 {
-    { 15, 15, SPECIES_NUMEL },
-    { 15, 15, SPECIES_KOFFING },
-    { 16, 16, SPECIES_NUMEL },
-    { 15, 15, SPECIES_MACHOP },
-    { 15, 15, SPECIES_TORKOAL },
-    { 15, 15, SPECIES_SLUGMA },
-    { 16, 16, SPECIES_KOFFING },
-    { 16, 16, SPECIES_MACHOP },
-    { 14, 14, SPECIES_TORKOAL },
-    { 16, 16, SPECIES_TORKOAL },
-    { 14, 14, SPECIES_GRIMER },
-    { 14, 14, SPECIES_GRIMER },
+    { 29, 29, SPECIES_NUMEL },
+    { 29, 29, SPECIES_PONYTA },
+    { 29, 29, SPECIES_VULPIX },
+    { 29, 29, SPECIES_GROWLITHE },
+    { 30, 39, SPECIES_TORKOAL },
+    { 31, 31, SPECIES_SLUGMA },
+    { 30, 30, SPECIES_QUILAVA },
+    { 30, 30, SPECIES_CHARMELEON },
+    { 30, 30, SPECIES_MONFERNO },
+    { 30, 30, SPECIES_HOUNDOOM },
+    { 30, 30, SPECIES_LARVESTA },
+    { 30, 30, SPECIES_LARVESTA },
 };
 
 const struct WildPokemonInfo gFieryPath_LandMonsInfo = { 10, gFieryPath_LandMons };
@@ -980,18 +980,18 @@ const struct WildPokemonInfo gMeteorFalls_B1F_2R_FishingMonsInfo = { 30, gMeteor
 
 const struct WildPokemon gJaggedPass_LandMons[] =
 {
-    { 21, 21, SPECIES_NUMEL },
-    { 21, 21, SPECIES_NUMEL },
-    { 21, 21, SPECIES_MACHOP },
-    { 20, 20, SPECIES_NUMEL },
-    { 20, 20, SPECIES_SPOINK },
-    { 20, 20, SPECIES_MACHOP },
-    { 21, 21, SPECIES_SPOINK },
-    { 22, 22, SPECIES_MACHOP },
-    { 22, 22, SPECIES_NUMEL },
-    { 22, 22, SPECIES_SPOINK },
-    { 22, 22, SPECIES_NUMEL },
-    { 22, 22, SPECIES_SPOINK },
+    { 37, 37, SPECIES_SNOVER },
+    { 38, 38, SPECIES_VULPIX_ALOLAN },
+    { 36, 36, SPECIES_VANILLITE },
+    { 36, 36, SPECIES_VANILLITE },
+    { 35, 35, SPECIES_CUBCHOO },
+    { 36, 36, SPECIES_SNEASEL },
+    { 35, 35, SPECIES_MIENFOO },
+    { 38, 38, SPECIES_LAIRON },
+    { 37, 37, SPECIES_BERGMITE },
+    { 35, 35, SPECIES_PRINPLUP },
+    { 35, 35, SPECIES_PRINPLUP },
+    { 35, 35, SPECIES_PRINPLUP },
 };
 
 const struct WildPokemonInfo gJaggedPass_LandMonsInfo = { 20, gJaggedPass_LandMons };
@@ -2565,18 +2565,18 @@ const struct WildPokemonInfo gVictoryRoad_B2F_FishingMonsInfo = { 30, gVictoryRo
 
 const struct WildPokemon gMeteorFalls_1F_1R_LandMons[] =
 {
-    { 16, 16, SPECIES_ZUBAT },
-    { 17, 17, SPECIES_ZUBAT },
-    { 18, 18, SPECIES_ZUBAT },
-    { 15, 15, SPECIES_ZUBAT },
-    { 14, 14, SPECIES_ZUBAT },
-    { 16, 16, SPECIES_SOLROCK },
-    { 18, 18, SPECIES_SOLROCK },
-    { 14, 14, SPECIES_SOLROCK },
-    { 19, 19, SPECIES_ZUBAT },
-    { 20, 20, SPECIES_ZUBAT },
-    { 19, 19, SPECIES_ZUBAT },
-    { 20, 20, SPECIES_ZUBAT },
+    { 36, 36, SPECIES_NOIBAT },
+    { 36, 36, SPECIES_NOIBAT },
+    { 37, 37, SPECIES_LUNATONE },
+    { 37, 37, SPECIES_SOLROCK },
+    { 35, 35, SPECIES_BAGON },
+    { 34, 34, SPECIES_AXEW },
+    { 34, 34, SPECIES_GOLETT },
+    { 34, 34, SPECIES_JANGMO_O },
+    { 35, 35, SPECIES_AXEW },
+    { 35, 35, SPECIES_JANGMO_O },
+    { 35, 35, SPECIES_BAGON },
+    { 39, 39, SPECIES_NOIBAT },
 };
 
 const struct WildPokemonInfo gMeteorFalls_1F_1R_LandMonsInfo = { 10, gMeteorFalls_1F_1R_LandMons };
@@ -2597,16 +2597,16 @@ const struct WildPokemonInfo gMeteorFalls_1F_1R_WaterMonsInfo = { 4, gMeteorFall
 
 const struct WildPokemon gMeteorFalls_1F_1R_FishingMons[] =
 {
-    { 5, 10, SPECIES_MAGIKARP },
-    { 5, 10, SPECIES_GOLDEEN },
-    { 10, 30, SPECIES_MAGIKARP },
-    { 10, 30, SPECIES_GOLDEEN },
-    { 10, 30, SPECIES_BARBOACH },
-    { 25, 30, SPECIES_BARBOACH },
-    { 30, 35, SPECIES_BARBOACH },
-    { 20, 25, SPECIES_BARBOACH },
-    { 35, 40, SPECIES_BARBOACH },
-    { 40, 45, SPECIES_BARBOACH },
+    { 35, 35, SPECIES_DRATINI },
+    { 35, 35, SPECIES_FEEBAS },
+    { 36, 36, SPECIES_DRAGONAIR },
+    { 36, 36, SPECIES_FEEBAS },
+    { 37, 37, SPECIES_LAPRAS },
+    { 54, 54, SPECIES_DRAGONAIR },
+    { 55, 55, SPECIES_MILOTIC },
+    { 55, 55, SPECIES_LAPRAS },
+    { 56, 56, SPECIES_RELICANTH },
+    { 56, 56, SPECIES_RELICANTH },
 };
 
 const struct WildPokemonInfo gMeteorFalls_1F_1R_FishingMonsInfo = { 30, gMeteorFalls_1F_1R_FishingMons };
