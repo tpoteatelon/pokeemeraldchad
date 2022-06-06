@@ -23,6 +23,8 @@ GraniteCave_1F_EventScript_EddieRivalBattle::
 	addobject LOCALID_EDDIE
 	applymovement 3, Movement_EddieR
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Turn
+	waitmovement 0
 	trainerbattle_double TRAINER_EDDIE_R, GraniteCave_1F_Text_EddieRivalIntro, GraniteCave_1F_EddieRivalTextDefeated, GraniteCave_1F_Text_NotEnoughMons, GraniteCave_1F_EventScript_EddieAftermath
 	release
 	end
@@ -30,6 +32,13 @@ GraniteCave_1F_EventScript_EddieRivalBattle::
  GraniteCave_1F_EventScript_EddieAftermath::
 	msgbox GraniteCave_1F_Text_EddieRivalPostBattle
 	setvar VAR_GRANITE_CAVE_1F_STATE, 1
+	goto GraniteCave_Remove_Eddie
+	release
+	end
+
+GraniteCave_Remove_Eddie:
+	lock
+	closemessage
 	applymovement 3, Movement_EddieFuckOff
 	waitmovement 0
 	removeobject LOCALID_EDDIE
@@ -52,6 +61,10 @@ GraniteCave_1F_Text_EddieRivalPostBattle:
 	.string "Wow, you're a strong opponent. I'll have\n"
 	.string "to keep an eye on you. I'll see you\l"
 	.string "around, buddy!$"
+
+Movement_Turn:
+	face_left
+	step_end
 
 Movement_EddieR:
 	walk_left
