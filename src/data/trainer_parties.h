@@ -7018,7 +7018,7 @@ static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
 };
 
 static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
-     {
+    {
     .iv = 50,
     .lvl = 27,
     .species = SPECIES_GURDURR,
@@ -7984,7 +7984,7 @@ static const struct TrainerMon sParty_Macey[] = {
 };
 
 static const struct TrainerMon sParty_BrendanRustboroTreecko[] = {
-     {
+    {
     .iv = 25,
     .lvl = 14,
     .species = SPECIES_SOLOSIS,
@@ -8103,7 +8103,7 @@ static const struct TrainerMon sParty_Jonathan[] = {
 };
 
 static const struct TrainerMon sParty_BrendanRustboroTorchic[] = {
-     {
+    {
     .iv = 25,
     .lvl = 14,
     .species = SPECIES_SNUBBULL,
