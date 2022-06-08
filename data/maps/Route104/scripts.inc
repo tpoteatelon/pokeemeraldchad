@@ -1066,7 +1066,6 @@ Route104_EventScript_WomanNew_Text_3:
 Route104_EventScript_WomanNew_Text_4:
 	.string "{PLAYER} has received a SHELLOS.$"
 
-
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"
 	.string "MR. BRINEY lives.\p"

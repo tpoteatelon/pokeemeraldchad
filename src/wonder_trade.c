@@ -21,6 +21,8 @@
 #include "constants/weather.h"
 #endif
 
+extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
+
 struct InGameTrade {
 	/*0x00*/ u8 name[11];
 	/*0x0C*/ u16 species;
@@ -221,7 +223,7 @@ void CreateWonderTradePokemon(u8 whichPlayerMon)
 		{
 			if (gEvolutionTable[species][i].method == EVO_TRADE)
 			{
-				// 30% chance for the in coming Pokémon to hold an Everstone if they evolve by trading
+				// 30% chance for the in coming Pokï¿½mon to hold an Everstone if they evolve by trading
 				if (Random() % 255 <= 77)
 				{
 					heldItem = ITEM_EVERSTONE;
@@ -230,7 +232,7 @@ void CreateWonderTradePokemon(u8 whichPlayerMon)
 			}
 			else if (gEvolutionTable[species][i].method == EVO_TRADE_ITEM)
 			{
-				// 30% chance for the in coming Pokémon to hold the item they need to evolve if they need one
+				// 30% chance for the in coming Pokï¿½mon to hold the item they need to evolve if they need one
 				if (Random() % 255 <= 77)
 				{
 					heldItem = gEvolutionTable[species][i].param;
@@ -241,7 +243,7 @@ void CreateWonderTradePokemon(u8 whichPlayerMon)
 	}
 
 #ifdef POKEMON_EXPANSION
-	// 10% chance of giving the in coming Pokémon their HA, if they have one
+	// 10% chance of giving the in coming Pokï¿½mon their HA, if they have one
 	// Uncomment if your copy of the pokemon_expansion is up-to-date.
 	//if (gBaseStats[incomingSpecies].abilities[2] != ABILITY_NONE && (Random() % 99) < 10)
 	//{
@@ -1207,7 +1209,7 @@ static bool32 IsMegaPreEvolution(u16 species, u16 heldStone)
 	return FALSE;
 }
 
-// Generate an item randomly for a Wonder Trade in coming Pokémon to hold, with a few exceptions
+// Generate an item randomly for a Wonder Trade in coming Pokï¿½mon to hold, with a few exceptions
 u16 GetValidWonderTradeItem(u16 item)
 {
 	u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
@@ -1261,7 +1263,7 @@ ROLL:
 		&& (GET_BASE_SPECIES_ID(species) != SPECIES_ORICORIO))
 		goto ROLL;
 
-	// Make sure that if the Pokémon can Mega Evolve, or it evolves into a species who can, it can get the relevant Mega Stone
+	// Make sure that if the Pokï¿½mon can Mega Evolve, or it evolves into a species who can, it can get the relevant Mega Stone
 	if (ItemId_GetHoldEffect(item) == HOLD_EFFECT_MEGA_STONE)
 	{
 		for (i = 0; i < EVOS_PER_MON; i++)

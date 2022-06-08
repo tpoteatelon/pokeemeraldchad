@@ -4222,7 +4222,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 		case ABILITY_KNUCKLEHEAD:
 			if (!gSpecialStatuses[battler].switchInAbilityDone)
 			{
-				gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_KNUCKLEHEAD;
+				gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_KNUCKLEHEAD;
 				gSpecialStatuses[battler].switchInAbilityDone = 1;
 				BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
 				effect++;

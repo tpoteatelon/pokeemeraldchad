@@ -1147,6 +1147,17 @@ static u32 GetActiveMatchCallTrainerId(u32 activeMatchCallId)
 */
 bool32 TryStartMatchCall(void)
 {
+    if (FlagGet(FLAG_HAS_MATCH_CALL)
+        && UpdateMatchCallStepCounter()
+        && UpdateMatchCallMinutesCounter()
+        && CheckMatchCallChance()
+        && MapAllowsMatchCall()
+        && SelectMatchCallTrainer())
+    {
+        StartMatchCall();
+        return TRUE;
+    }
+
     return FALSE;
 }
 
@@ -1776,7 +1787,22 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
     party = gTrainers[trainerId].party;
     monId = Random() % gTrainers[trainerId].partySize;
 
-	speciesName = gSpeciesNames[party.TrainerMon[monId].species];
+    switch (gTrainers[trainerId].partyFlags)
+    {
+    case 0:
+    default:
+        speciesName = gSpeciesNames[party.NoItemDefaultMoves[monId].species];
+        break;
+    case F_TRAINER_PARTY_CUSTOM_MOVESET:
+        speciesName = gSpeciesNames[party.NoItemCustomMoves[monId].species];
+        break;
+    case F_TRAINER_PARTY_HELD_ITEM:
+        speciesName = gSpeciesNames[party.ItemDefaultMoves[monId].species];
+        break;
+    case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
+        speciesName = gSpeciesNames[party.ItemCustomMoves[monId].species];
+        break;
+    }
 
     StringCopy(destStr, speciesName);
 }

@@ -1820,159 +1820,237 @@ static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite)
 
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
-	u32 personalityValue;
-	u8 fixedIV;
-	u8 level;
-	s32 i, j;
-	u16 ev;
-	u8 monsCount;
-	u8 nickname[POKEMON_NAME_LENGTH + 1];
-	u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
-	u8 ability, gender, friendship;
+    u32 nameHash = 0;
+    u32 personalityValue;
+    u8 fixedIV;
+    s32 i, j;
+    u8 monsCount;
 
-	if (trainerNum == TRAINER_SECRET_BASE)
-		return 0;
+    if (trainerNum == TRAINER_SECRET_BASE)
+        return 0;
 
-	if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER
-		| BATTLE_TYPE_EREADER_TRAINER
-		| BATTLE_TYPE_TRAINER_HILL)))
-	{
-		if (firstTrainer == TRUE)
-			ZeroEnemyPartyMons();
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER
+                                                                        | BATTLE_TYPE_EREADER_TRAINER
+                                                                        | BATTLE_TYPE_TRAINER_HILL)))
+    {
+        if (firstTrainer == TRUE)
+            ZeroEnemyPartyMons();
 
-		if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-		{
-			if (gTrainers[trainerNum].partySize > 3)
-				monsCount = 3;
-			else
-				monsCount = gTrainers[trainerNum].partySize;
-		}
-		else
-		{
-			monsCount = gTrainers[trainerNum].partySize;
-		}
+        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+        {
+            if (gTrainers[trainerNum].partySize > PARTY_SIZE / 2)
+                monsCount = PARTY_SIZE / 2;
+            else
+                monsCount = gTrainers[trainerNum].partySize;
+        }
+        else
+        {
+            monsCount = gTrainers[trainerNum].partySize;
+        }
 
-		for (i = 0; i < monsCount; i++)
-		{
-			const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
-			fixedIV = partyData[i].iv + TRAINER_IV_MODIFIER;
+        for (i = 0; i < monsCount; i++)
+        {
 
-			if (gTrainers[trainerNum].doubleBattle == TRUE)
-				personalityValue = 0x80;
-			else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
-				personalityValue = 0x78;
-			else
-				personalityValue = 0x88;
+            if (gTrainers[trainerNum].doubleBattle == TRUE)
+                personalityValue = 0x80;
+            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
+            else
+                personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
 
-			for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
-				nameHash += gTrainers[trainerNum].trainerName[j];
+            for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
+                nameHash += gTrainers[trainerNum].trainerName[j];
 
-			if (gTrainers[trainerNum].doubleBattle == TRUE)
-				personalityValue = 0x80;
-			else if (gTrainers[trainerNum].encounterMusic_gender & 0x80)
-			{
-				personalityValue = 0x78;
-				gender = MON_MALE;
-			}
-			else
-			{
-				personalityValue = 0x88;
-				gender = MON_FEMALE;
-			}
+            switch (gTrainers[trainerNum].partyFlags)
+            {
+            case 0:
+            {
+                const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
 
-			if (partyData[i].gender == TRAINER_MON_MALE)
-				gender = MON_MALE;
-			else if (partyData[i].gender == TRAINER_MON_FEMALE)
-				gender = MON_FEMALE;
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
 
+                personalityValue += nameHash << 8;
+                fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                break;
+            }
+            case F_TRAINER_PARTY_CUSTOM_MOVESET:
+            {
+                const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
 
-			// MON_MALE and NATURE_HARDY share the default values. If one is set, assume the other is also meant to be set.
-			// Enforced male pokemon cannot be Hardy. All pokemon with set natures will be male unless otherwise stated.
-			if (partyData[i].nature > 0)
-				CreateMonWithGenderNatureLetter(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, gender, partyData[i].nature, 0, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY);
-			else
-			{
-				CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, partyData[i].shiny ? OT_ID_SHINY : OT_ID_RANDOM_NO_SHINY, 0);
-			}
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
 
-			if (partyData[i].friendship > 0)
-			{
-				if (partyData[i].friendship == TRAINER_MON_UNFRIENDLY)
-					friendship = 0;
-				else if (partyData[i].friendship == TRAINER_MON_FRIENDLY)
-					friendship = MAX_FRIENDSHIP;
-				SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
-			}
+                personalityValue += nameHash << 8;
+                fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
-			if (partyData[i].nickname[0] != '\0')
-				SetMonData(&party[i], MON_DATA_NICKNAME, &partyData[i].nickname);
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                    SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
+                }
+                break;
+            }
+            case F_TRAINER_PARTY_HELD_ITEM:
+            {
+                const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
 
-			if (partyData[i].ability > 0)
-			{
-				ability = partyData[i].ability;
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
 
-				if (partyData[i].ability == ABILITY_SLOT_1)
-					ability = 0;
+                personalityValue += nameHash << 8;
+                fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
-				SetMonData(&party[i], MON_DATA_ABILITY_NUM, &ability);
-			}
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                break;
+            }
+            case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
+            {
+                const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
 
-			if (partyData[i].ball > 0)
-				SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[i].ball);
+                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
+                    nameHash += gSpeciesNames[partyData[i].species][j];
 
-			if (partyData[i].heldItem > 0)
-				SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                personalityValue += nameHash << 8;
+                fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
-			if (partyData[i].moves[0] != '\0')
-			{
-				for (j = 0; j < MAX_MON_MOVES; j++)
-				{
-					SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-					SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
-					SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
-					SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
-				}
-			}
+                SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
-			if (partyData[i].iv > 0)
-			{
-				for (j = 0; j < NUM_STATS; j++)
-				{
-					SetMonData(&party[i], MON_DATA_HP_IV + j, &fixedIV);
-				}
-			}
-			else if (partyData[i].iv == WORST_IVS)
-			{
-				fixedIV = 0;
+                for (j = 0; j < MAX_MON_MOVES; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
+                    SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
+                }
+                break;
+            }
+            }
+        }
 
-				for (j = 0; j < NUM_STATS; j++)
-				{
-					SetMonData(&party[i], MON_DATA_HP_IV + j, &fixedIV);
-				}
-			}
-			else
-			{
-				for (j = 0; j < NUM_STATS; j++)
-				{
-					SetMonData(&party[i], MON_DATA_HP_IV + j, &partyData[i].ivs[j]);
-				}
-			}
+        gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
+    }
 
-			for (j = 0; j < NUM_STATS; j++)
-			{
-				SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
-			}
-
-			StringCopy(trainerName, gTrainers[trainerNum].trainerName);
-			SetMonData(&party[i], MON_DATA_OT_NAME, trainerName);
-			CalculateMonStats(&party[i]);
-		}
-
-		gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
-	}
-
-	return gTrainers[trainerNum].partySize;
+    return gTrainers[trainerNum].partySize;
 }
+
+void VBlankCB_Battle(void)
+{
+    // Change gRngSeed every vblank unless the battle could be recorded.
+    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_RECORDED)))
+        Random();
+
+    SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_X);
+    SetGpuReg(REG_OFFSET_BG0VOFS, gBattle_BG0_Y);
+    SetGpuReg(REG_OFFSET_BG1HOFS, gBattle_BG1_X);
+    SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
+    SetGpuReg(REG_OFFSET_BG2HOFS, gBattle_BG2_X);
+    SetGpuReg(REG_OFFSET_BG2VOFS, gBattle_BG2_Y);
+    SetGpuReg(REG_OFFSET_BG3HOFS, gBattle_BG3_X);
+    SetGpuReg(REG_OFFSET_BG3VOFS, gBattle_BG3_Y);
+    SetGpuReg(REG_OFFSET_WIN0H, gBattle_WIN0H);
+    SetGpuReg(REG_OFFSET_WIN0V, gBattle_WIN0V);
+    SetGpuReg(REG_OFFSET_WIN1H, gBattle_WIN1H);
+    SetGpuReg(REG_OFFSET_WIN1V, gBattle_WIN1V);
+    LoadOam();
+    ProcessSpriteCopyRequests();
+    TransferPlttBuffer();
+    ScanlineEffect_InitHBlankDmaTransfer();
+}
+
+void SpriteCB_VsLetterDummy(struct Sprite *sprite)
+{
+
+}
+
+static void SpriteCB_VsLetter(struct Sprite *sprite)
+{
+    if (sprite->data[0] != 0)
+        sprite->x = sprite->data[1] + ((sprite->data[2] & 0xFF00) >> 8);
+    else
+        sprite->x = sprite->data[1] - ((sprite->data[2] & 0xFF00) >> 8);
+
+    sprite->data[2] += 0x180;
+
+    if (sprite->affineAnimEnded)
+    {
+        FreeSpriteTilesByTag(ANIM_SPRITES_START);
+        FreeSpritePaletteByTag(ANIM_SPRITES_START);
+        FreeSpriteOamMatrix(sprite);
+        DestroySprite(sprite);
+    }
+}
+
+void SpriteCB_VsLetterInit(struct Sprite *sprite)
+{
+    StartSpriteAffineAnim(sprite, 1);
+    sprite->callback = SpriteCB_VsLetter;
+    PlaySE(SE_MUGSHOT);
+}
+
+static void BufferPartyVsScreenHealth_AtEnd(u8 taskId)
+{
+    struct Pokemon *party1 = NULL;
+    struct Pokemon *party2 = NULL;
+    u8 multiplayerId = gBattleScripting.multiplayerId;
+    u32 flags;
+    s32 i;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
+    {
+        switch (gLinkPlayers[multiplayerId].id)
+        {
+        case 0:
+        case 2:
+            party1 = gPlayerParty;
+            party2 = gEnemyParty;
+            break;
+        case 1:
+        case 3:
+            party1 = gEnemyParty;
+            party2 = gPlayerParty;
+            break;
+        }
+    }
+    else
+    {
+        party1 = gPlayerParty;
+        party2 = gEnemyParty;
+    }
+
+    flags = 0;
+    BUFFER_PARTY_VS_SCREEN_STATUS(party1, flags, i);
+    gTasks[taskId].data[3] = flags;
+
+    flags = 0;
+    BUFFER_PARTY_VS_SCREEN_STATUS(party2, flags, i);
+    gTasks[taskId].data[4] = flags;
+}
+
+void CB2_InitEndLinkBattle(void)
+{
+    s32 i;
+    u8 taskId;
+
+    SetHBlankCallback(NULL);
+    SetVBlankCallback(NULL);
+    gBattleTypeFlags &= ~BATTLE_TYPE_LINK_IN_BATTLE;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+    {
+        SetMainCallback2(gMain.savedCallback);
+        FreeBattleResources();
+        FreeBattleSpritesData();
+        FreeMonSpritesGfx();
+    }
+    else
+    {
+        CpuFill32(0, (void*)(VRAM), VRAM_SIZE);
+        SetGpuReg(REG_OFFSET_MOSAIC, 0);
+        SetGpuReg(REG_OFFSET_WIN0H, DISPLAY_WIDTH);
+        SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(DISPLAY_HEIGHT / 2, DISPLAY_HEIGHT / 2 + 1));
         SetGpuReg(REG_OFFSET_WININ, 0);
         SetGpuReg(REG_OFFSET_WINOUT, 0);
         gBattle_WIN0H = DISPLAY_WIDTH;
