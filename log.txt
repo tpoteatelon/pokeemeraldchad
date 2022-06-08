@@ -1,68 +1,7 @@
-tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleArenaCorridor/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/AquaHideout_B1F/map.json data/layouts/layouts.json
-tools/agbcc/bin/agbcc <flags> -o build/emerald/src/data.o src/data.c
-tools/mapjson/mapjson map emerald data/maps/VictoryRoad_B2F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SlateportCity_OceanicMuseum_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_B1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SootopolisCity/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SecretBase_RedCave3/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/OldaleTown/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Room_B1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/DewfordTown_House1/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/RustboroCity_DevonCorp_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/PacifidlogTown_House5/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SlateportCity_BattleTentCorridor/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattleFrontier_Lounge9/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SkyPillar_Entrance/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route110_TrickHousePuzzle5/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/TrainerHill_Entrance/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Rooms2_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SlateportCity/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_Down01/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/FortreeCity_Gym/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare13/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SootopolisCity_House6/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route104_PrototypePrettyPetalFlowerShop/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/LilycoveCity_CoveLilyMotel_2F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/MossdeepCity_SpaceCenter_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/EverGrandeCity_GlaciasRoom/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SSTidalLowerDeck/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SkyPillar_Outside/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/MtChimney_CableCarStation/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SkyPillar_2F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SlateportCity_BattleTentLobby/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route119/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Underwater_Route124/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Underwater_Route128/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/EverGrandeCity_HallOfFame/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/FortreeCity_PokemonCenter_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/LilycoveCity_Harbor/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SecretBase_BlueCave3/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/MagmaHideout_2F_1R/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route132/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/LittlerootTown/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route123/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattleColosseum_4P/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/MossdeepCity_GameCorner_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare02/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidFloor/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/TerraCave_Entrance/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/FortreeCity_Mart/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/RustboroCity_House3/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/MtPyre_6F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/ShoalCave_LowTideLowerRoom/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidTop/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_Up2/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SootopolisCity_MysteryEventsHouse_B1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room3/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/RecordCorner/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare16/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/Route105/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/SecretBase_BrownCave4/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Corridors_1F/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/FortreeCity_DecorationShop/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_Down08/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_Down07/map.json data/layouts/layouts.json
-tools/mapjson/mapjson map emerald data/maps/NavelRock_Down06/map.json data/layouts/layouts.json
-Makefile:345: recipe for target 'build/emerald/src/data.o' failed
-Makefile:450: recipe for target 'debugging' failed
+tools/mapjson/mapjson map emerald data/maps/GraniteCave_1F/map.json data/layouts/layouts.json
+tools/preproc/preproc data/map_events.s charmap.txt | cc -E -I include - | arm-none-eabi-as -mcpu=arm7tdmi --defsym MODERN=0 -o build/emerald/data/map_events.o
+tools/preproc/preproc data/maps.s charmap.txt | cc -E -I include - | arm-none-eabi-as -mcpu=arm7tdmi --defsym MODERN=0 -o build/emerald/data/maps.o
+cd build/emerald && arm-none-eabi-ld -Map ../../pokeemerald.map -T ld_script.ld -o ../../pokeemerald.elf <objects> <lib>
+tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
+tools/gbafix/gbafix pokeemerald.gba -p --silent
