@@ -150,7 +150,7 @@ MAKEFLAGS += --no-print-directory
 # Secondary expansion is required for dependency variables in object rules.
 .SECONDEXPANSION:
 
-.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) libagbsyscall modern tidymodern tidynonmodern debugging debugging_modern
+.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) libagbsyscall modern tidymodern tidynonmodern
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
 
@@ -443,11 +443,5 @@ libagbsyscall:
 ### Symbol file ###
 ###################
 
-libagbsyscall:
-	@$(MAKE) -C libagbsyscall TOOLCHAIN=$(TOOLCHAIN)
-
-# Debug menu
-debugging: ; @$(MAKE) DDEBUGGING=1 DINFO=1
-debugging_modern: ; @$(MAKE) MODERN=1 DDEBUGGING=1 DINFO=1
 $(SYM): $(ELF)
 	$(OBJDUMP) -t $< | sort -u | grep -E "^0[2389]" | $(PERL) -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$$/\1 \2 \3 \4/g' > $@

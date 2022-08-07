@@ -9,6 +9,7 @@
 #include "bike.h"
 #include "coins.h"
 #include "data.h"
+#include "debug.h"
 #include "event_data.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
@@ -1002,38 +1003,29 @@ static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThe
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
 void ItemUseInBattle_PokeBall(u8 taskId)
 {
-    switch (GetBallThrowableState())
+    #ifdef TX_DEBUGGING
+    if (FlagGet(FLAG_SYS_NO_CATCHING)){ //DEBUG
+        static const u8 sText_BallsCannotBeUsed[] = _("Poké Balls cannot be used\nright now!\p");
+        DisplayItemMessage(taskId, 1, sText_BallsCannotBeUsed, CloseItemMessage);
+        return;
+    }
+    #endif
+    if (IsPlayerPartyAndPokemonStorageFull() == FALSE) // have room for mon?
     {
-    case BALL_THROW_ABLE:
-    default:
         RemoveBagItem(gSpecialVar_ItemId, 1);
         if (!InBattlePyramid())
             Task_FadeAndCloseBagMenu(taskId);
         else
             CloseBattlePyramidBag(taskId);
-        break;
-    case BALL_THROW_UNABLE_TWO_MONS:
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, sText_CantThrowPokeBall_TwoMons, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, sText_CantThrowPokeBall_TwoMons, Task_CloseBattlePyramidBagMessage);
-        break;
-    case BALL_THROW_UNABLE_NO_ROOM:
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, gText_BoxFull, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, gText_BoxFull, Task_CloseBattlePyramidBagMessage);
-        break;
-    #if B_SEMI_INVULNERABLE_CATCH >= GEN_4
-    case BALL_THROW_UNABLE_SEMI_INVULNERABLE:
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, sText_CantThrowPokeBall_SemiInvulnerable, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, sText_CantThrowPokeBall_SemiInvulnerable, Task_CloseBattlePyramidBagMessage);
-        break;
-    #endif
     }
+    else if (!InBattlePyramid())
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_BoxFull, CloseItemMessage);
+    }
+    else
+        DisplayItemMessageInBattlePyramid(taskId, gText_BoxFull, Task_CloseBattlePyramidBagMessage);
 }
+
 
 static void Task_CloseStatIncreaseMessage(u8 taskId)
 {

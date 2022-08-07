@@ -15,6 +15,7 @@ Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_ADVENTURE_STARTED
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
@@ -57,4 +58,28 @@ Debug_CheatStart::
 	@ doweather
 	closemessage
 	release
+	end
+
+Debug_Script_1::
+	end
+
+Debug_Script_2::
+	end
+
+Debug_Script_3::
+	end
+
+Debug_Script_4::
+	end
+
+Debug_Script_5::
+	end
+
+Debug_Script_6::
+	end
+
+Debug_Script_7::
+	end
+
+Debug_Script_8::
 	end
